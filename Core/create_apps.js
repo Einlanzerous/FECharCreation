@@ -3,8 +3,9 @@
     Created by Ashley Dodson, Leng Ghuy, Michael Scott, Jacob Frizzell
     April 2017
 
-    Purpose of this page: AngularJS module for the website to utilize
+    Purpose of this page: AngularJS module for the create.html to utilize
 */
+
 var app = angular.module("app", []);
 
 app.controller('ctrl', function ($scope) {

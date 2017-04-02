@@ -2,20 +2,87 @@
 <html lang="en">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
 <!--
     Final Project for CSCI 344 | Fragged Empire Character Creation Tool
     Created by Ashley Dodson, Leng Ghuy, Michael Scott, Jacob Frizzell
     April 2017
 
-    Purpose of this page:
+    Purpose of this page: Provide information about the races/classes
 -->
 
 <head>
     <meta charset="UTF-8">
     <title>Character Information</title>
 </head>
-<body>
+
+<body ng-app="">
+<div class="container">
+    <h6>
+        <form>
+            Select a race:
+            <select ng-model="myVar">
+                <option value=""></option>
+                <option value="Corp">Corporation</option>
+                <option value="Kalt">Kaltoran</option>
+                <option value="Legn">Legion</option>
+                <option value="Neph">Nephilim</option>
+                <option value="Pala">Palantor</option>
+                <option value="Remt">Remnant</option>
+                <option value="TwFr">Twi-Far</option>
+                <option value="Zhou">Zhou</option>
+            </select>
+        </form>
+    </h6>
+</div>
+<div ng-switch="myVar">
+    <div ng-switch-when="Corp">
+        <h2>
+            Corporation
+        </h2>
+    </div>
+    <div ng-switch-when="Kalt">
+        <h2>
+            Kaltoran
+        </h2>
+    </div>
+    <div ng-switch-when="Legn">
+        <h2>
+            Legion
+        </h2>
+    </div>
+    <div ng-switch-when="Neph">
+        <h2>
+            Nephilim
+        </h2>
+    </div>
+    <div ng-switch-when="Pala">
+        <h2>
+            Palantor
+        </h2>
+    </div>
+    <div ng-switch-when="Remt">
+        <h2>
+            Remnant
+        </h2>
+    </div>
+    <div ng-switch-when="TwFr">
+        <h2>
+            Twi-Far
+        </h2>
+    </div>
+    <div ng-switch-when="Zhou">
+        <h2>
+            Zhou
+        </h2>
+    </div>
+</div>
+
+<p>
+    Select the race you want to learn more about
+</p>
+
 <div class="container">
     <a href="index.html">Go back to index</a>
 </div>
