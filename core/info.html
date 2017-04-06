@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-
 <!--
     Final Project for CSCI 344 | Fragged Empire Character Creation Tool
     Created by Ashley Dodson, Leng Ghuy, Michael Scott, Jacob Frizzell
@@ -15,75 +12,116 @@
 <head>
     <meta charset="UTF-8">
     <title>Character Information</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
-<body ng-app="">
+<body>
 <div class="container">
-    <h6>
-        <form>
-            Select a race:
-            <select ng-model="myVar">
-                <option value=""></option>
-                <option value="Corp">Corporation</option>
-                <option value="Kalt">Kaltoran</option>
-                <option value="Legn">Legion</option>
-                <option value="Neph">Nephilim</option>
-                <option value="Pala">Palantor</option>
-                <option value="Remt">Remnant</option>
-                <option value="TwFr">Twi-Far</option>
-                <option value="Zhou">Zhou</option>
-            </select>
-        </form>
-    </h6>
-</div>
-<div ng-switch="myVar">
-    <div ng-switch-when="Corp">
-        <h2>
-            Corporation
-        </h2>
-    </div>
-    <div ng-switch-when="Kalt">
-        <h2>
-            Kaltoran
-        </h2>
-    </div>
-    <div ng-switch-when="Legn">
-        <h2>
-            Legion
-        </h2>
-    </div>
-    <div ng-switch-when="Neph">
-        <h2>
-            Nephilim
-        </h2>
-    </div>
-    <div ng-switch-when="Pala">
-        <h2>
-            Palantor
-        </h2>
-    </div>
-    <div ng-switch-when="Remt">
-        <h2>
-            Remnant
-        </h2>
-    </div>
-    <div ng-switch-when="TwFr">
-        <h2>
-            Twi-Far
-        </h2>
-    </div>
-    <div ng-switch-when="Zhou">
-        <h2>
-            Zhou
-        </h2>
-    </div>
-</div>
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a data-toggle="tab" href="#corp">
+                Corporation
+            </a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#kalt">
+                Kaltoran
+            </a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#legn">
+                Legion
+            </a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#neph">
+                Nephilim
+            </a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#pala">
+                Palantor
+            </a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#Remt">
+                Remnant
+            </a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#twfr">
+                Twi-Far
+            </a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#zhou">
+                Zhou
+            </a>
+        </li>
+    </ul>
 
-<p>
-    Select the race you want to learn more about
-</p>
+    <div class="tab-content">
+        <div id="corp" class="tab-pane fade in active">
+            <h3>
+                Corporation
+            </h3>
+            <p>
+                Stuff about them
+            </p>
+        </div>
+        <div id="kalt" class="tab-pane fade">
+            <h3>
+                Kaltoran
+            </h3>
+            <p>
+                Stuff about them too.
+            </p>
+        </div>
+        <div id="legn" class="tab-pane fade">
+            <h3>
+                Legion
+            </h3>
+            <p>
+                Stuff about them too. dfdfdsf
+            </p>
+        </div>
+        <div id="neph" class="tab-pane fade">
+            <h3>
+                Nephilim
+            </h3>
+            <p>
+                Stuff about them too. With lots more
+            </p>
+        </div>
+        <div id="pala" class="tab-pane fade">
+            <h3>
+                Palantor
+            </h3>
+            <p>
+                Stuff about them too. Deep derrp
+            </p>
+        </div>
+        <div id="twfr" class="tab-pane fade">
+            <h3>
+                Twi-Far
+            </h3>
+            <p>
+                Bitches love parasites
+            </p>
+        </div>
+        <div id="zhou" class="tab-pane fade">
+            <h3>
+                Zhou
+            </h3>
+            <p>
+                Murderous plant like people. Xenomorphs from Alien?
+            </p>
+        </div>
+    </div>
 
-<div class="container">
     <a href="index.html">
         <button type="button" class="btn btn-primary">
             Go back to index
