@@ -1,4 +1,101 @@
+html{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url("Images/Background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+container{
+    width: 100%;
+    margin: -50px;
+    margin-left: 25%;
+}
+
+
+h1{
+    padding: 0px;
+    margin: 5px;
+    font-size: 35px;
+    color: #FFFFFF;
+}
+.bottom{
+    display: table;
+    position: absolute;
+    bottom: 0px;
+    padding: 0px;
+    height: 25%;
+    width: 100%;
+    background-color: #5AC;
+    text-align: center;
+}
+
+.title{
+    position: fixed;
+    bottom: 0px;
+    padding: 0px;
+    height: 33%;
+    width: 100%;
+    background-color: #333333;
+    text-align: center;
+}
+.banner {
+    height: 13%;
+    width: 50%;
+    position: fixed;
+    margin-top: 10%;
+    opacity: .8;
+
+}
+img.logo {
+    height: 200%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+img.background {
+    width: 100%;
+}
 ul li {
     text-decoration: none;
-    list-style: none;
+    list-style: circle;
+}
+
+.col-md-4 {
+    width: 25%;
+    text-align: center;
+}
+
+.row {
+    width: 80%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+h4 {
+    font-size: 25px;
+}
+p {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.btn {
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #555555;
+    font-size: 18px;
+    text-transform: uppercase;
+    width: 200px;
+    border-radius: 0px;
+    padding: 10px 20px;
+    border: 1px solid #000000;
+}
+
+.btn:hover {
+    background-color: #666;
+    border: 1px solid #FFF;
 }

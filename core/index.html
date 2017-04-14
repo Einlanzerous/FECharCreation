@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
 <!--
     Final Project for CSCI 344 | Fragged Empire Character Creation Tool
     Created by Ashley Dodson, Leng Ghuy, Michael Scott, Jacob Frizzell
@@ -12,28 +10,42 @@
 -->
 
 <head>
-    <meta charset="UTF-8">
-    <title>Fragged Empire | Character Creation Tool</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="appearance.css" rel='stylesheet' type='text/css'>
 </head>
+
 <body>
-    <div class="container">
-        <h1>
-            Fragged Empire Character Creation Tool
-        </h1>
-    </div>
-    <div class="container">
-        <ul class="list-inline">
-            <li>
-                <a href="quiz.html">Take the Quiz</a>
-            </li>
-            <li>
-                <a href="info.html">Find out more</a>
-            </li>
-            <li>
-                <a href="create.html">Create Manually</a>
-            </li>
-        </ul>
+    <div class="banner">
+        <img class="logo" src="Images/Logo.png">
     </div>
 
+    <div class="title">
+        <h1>Character Creation Tools</h1>
+    </div>
+
+    <div class="bottom">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Explore Backstories</h4>
+                <p>Learn about the world of Fragged Empire and its many diverse characters.</p>
+                <a class="btn" href="info.html">Discover</a>
+            </div>
+            <div class="col-md-4">
+                <h4>Take the Quiz</h4>
+                <p>Can't decide? We'll help you pick your a race that best suits your character.</p>
+                <a class="btn" href="quiz.html">Start</a>
+            </div>
+            <div class="col-md-4">
+                <h4>Create Your Own</h4>
+                <p>You can customize and build your very own character sheet from scratch.</p>
+                <a class="btn" href="create.html">Craft</a>
+            </div>
+            <div class="col-md-4">
+                <h4>About This Site</h4>
+                <p>Curious about the developers or just want more information about Fragged Empire?</p>
+                <a class="btn" href="#">Contact Us</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
