@@ -9,3 +9,4 @@ Update List<br>
 04/02/2017 | 3:44P- Uploaded race/class info sheet. AND<br>
 04/02/2017 | 6:50P- Built a test module for manual character creation page. AND<br>
 04/02/2017 | 7:57P- Built structure for info page. AND<br>
+04/14/2017 | 3:25A- I did the best I can with the CSS...but it's 3:30 am, RIP my life, and I'm going to bed. I shall work on it more later. AND<br>
