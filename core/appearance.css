@@ -99,3 +99,12 @@ p {
     background-color: #666;
     border: 1px solid #FFF;
 }
+
+.manualCreate {
+    bakground-color: white;
+    background-image: none;
+}
+
+#stats {
+    list-style-type: none;
+}

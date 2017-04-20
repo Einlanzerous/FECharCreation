@@ -18,13 +18,13 @@
     <meta charset="UTF-8">
     <title>Create Character Manual Mode</title>
 </head>
-<body>
-    <div class="container">
+<body class="manualCreate">
+    <div class="container" ng-app="app" ng-controller="ctrl">
         <h2 class="charName">
             Create your Own Character
         </h2>
-        <div class="container" ng-app="app" ng-controller="ctrl">
-            <ul class="list-inline">
+        <div class="container">
+            <ul class="list-inline" id="stats">
                 <li>
                     <div>
                         <form>
@@ -97,29 +97,93 @@
                     Attributes
                 </h3>
                 <div class="col-md-6">
-                    <ul>
-                        <li>
-                            Strength
-                        </li>
-                        <li>
-                            Reflexes
-                        </li>
-                        <li>
-                            Movement
-                        </li>
-                        <li>
-                            Focus
-                        </li>
-                        <li>
-                            Intelligence
-                        </li>
-                        <li>
-                            Perception
-                        </li>
-                        <li>
-                            Fate
-                        </li>
-                    </ul>
+                    <table>
+                        <tr>
+                            <td>
+                                Strength:
+                            </td>
+                            <td>
+                                {{strVal}} |
+                                <button ng-click="remStr()">
+                                    <i class="glyphicon-minus"></i>
+                                </button>
+                                <button ng-click="addStr()">
+                                    <i class="glyphicon-plus"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Reflexes:
+                            </td>
+                            <td>
+                                {{rfxVal}} |
+                                <button ng-click="remRfx()">
+                                    <i class="glyphicon-minus"></i>
+                                </button>
+                                <button ng-click="addRfx()">
+                                    <i class="glyphicon-plus"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Movement:
+                            </td>
+                            <td>
+                                {{movVal}} |
+                                <button ng-click="remMov()">
+                                    <i class="glyphicon-minus"></i>
+                                </button>
+                                <button ng-click="addMov()">
+                                    <i class="glyphicon-plus"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Focus:
+                            </td>
+                            <td>
+                                {{focVal}} |
+                                <button ng-click="remFoc()">
+                                    <i class="glyphicon-minus"></i>
+                                </button>
+                                <button ng-click="addFoc()">
+                                    <i class="glyphicon-plus"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Intelligence:
+                            </td>
+                            <td>
+                                {{intVal}} |
+                                <button ng-click="remInt()">
+                                    <i class="glyphicon-minus"></i>
+                                </button>
+                                <button ng-click="addInt()">
+                                    <i class="glyphicon-plus"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Perception:
+                            </td>
+                            <td>
+                                {{perVal}} |
+                                <button ng-click="remPer()">
+                                    <i class="glyphicon-minus"></i>
+                                </button>
+                                <button ng-click="addPer()">
+                                    <i class="glyphicon-plus"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+
                 </div>
                 <div class="col-md-6">
                     <p>
