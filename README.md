@@ -11,3 +11,4 @@ Update List<br>
 04/02/2017 | 7:57P- Built structure for info page. AND<br>
 04/14/2017 | 3:25A- I did the best I can with the CSS...but it's 3:30 am, RIP my life, I'm going to bed. I shall work on it more later. AND<br>
 04/18/2017 | 2:06A- Mostly completed CSS design of Info page. AND<br>
+04/20/2017 | 10:34A- Updates to the character creation page, plus and minus buttons made for attributes. AND<br>
