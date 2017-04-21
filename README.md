@@ -1,7 +1,7 @@
 # FECharCreation
 Character Creation Tool for Fragged Empire<br>
 
-
+Site consists of a "quiz" to help users figure out what they want to play in Fragged Empire. Also has a manual character sheet. Work in progress.
 
 Update List<br>
 03/28/2017 | 8:05A- Created basic file structure. AND<br>
