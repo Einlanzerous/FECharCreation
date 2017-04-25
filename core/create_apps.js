@@ -9,6 +9,7 @@
 var app = angular.module("app", []);
 
 app.controller('ctrl', function ($scope) {
+    //Declare variables
     $scope.races = ["Corporation", "Kaltoran", "Legion", "Nephilim", "Palantor", "Remnant", "Twi-Far", "Zhou"];
     $scope.name = "Test";
     $scope.player = "Example";
@@ -22,8 +23,14 @@ app.controller('ctrl', function ($scope) {
     $scope.faeVal = 2;
     $scope.level = 1;
     $scope.resources = 2 + $scope.level;
+    $scope.currentRes = $scope.resources;
     $scope.influence = 2 + $scope.level;
+    $scope.currentInf = $scope.influence;
     $scope.totalAttr = 18;
+    $scope.traits = 1;
+    $scope.numSkills = 0;
+
+    //Functions below
     $scope.limit = function (val) {
         return (Math.min(5, Math.max(0, val)));
     };
@@ -38,11 +45,18 @@ app.controller('ctrl', function ($scope) {
         $scope.level = $scope.level + 1;
         $scope.resources = $scope.resources + 1;
         $scope.influence = $scope.influence + 1;
+        $scope.traits = $scope.traits + 1;
     };
     $scope.decLevel = function () {
-        $scope.level = $scope.level - 1;
-        $scope.resources = $scope.resources -1;
-        $scope.influence = $scope.influence - 1;
+        if ($scope.level === 1) {
+            $scope.level = 1;
+        }
+        else {
+            $scope.level = $scope.level - 1;
+            $scope.resources = $scope.resources -1;
+            $scope.influence = $scope.influence - 1;
+            $scope.traits = $scope.traits - 1;
+        }
     };
     $scope.addStr = function () {
         $scope.strVal = $scope.strVal + 1;
@@ -94,43 +108,26 @@ app.controller('ctrl', function ($scope) {
     };
 
     //Test bed section for functions
-    $scope.wealth = false;
-    $scope.primarySkills = [
-        {
-            wealth: false,
-            conversation: false,
-            leadership: false,
-            culture: false,
-            physical: false,
-            resolve: false,
-            awareness: false,
-            survival: false,
-            mechanics: false,
-            electronics: false,
-            programming: false,
-            bio_tech: false,
-            medicine: false,
-            psychology: false,
-            astronomy: false,
-            planetoids: false
-        }
-    ];
+    $scope.primarySkills = {wealth:false, conversation:false, leadership:false, culture:false, physical:false,
+    resolve:false, awareness:false, survival:false, mechanics:false, electronics: false, programming:false,
+    bio_tech:false, medicine:false, psychology:false, astronomy:false, planetoids:false};
     $scope.maxPrimary = function () {
-        counter = 0;
-
-        for (i = 0; i < primarySkills.length; i++) {
-            if (primarySkills[i] === true) {
-                counter++;
-            }
-
-            if (counter >= 2) {
-                return true;
-            }
+        if ($scope.numSkills >= 6){
+            return true;
         }
-
-        return false;
+        else{
+            return false;
+        }
     };
-    $scope.traits = [
+    $scope.changeNumSkills = function(skill) {
+        if (skill){
+            $scope.numSkills = $scope.numSkills + 1;
+        }
+        else {
+            $scope.numSkills = $scope.numSkills - 1;
+        }
+    };
+    /*$scope.traitList = [
         {
             skill: {
                 type: "category",
@@ -140,7 +137,7 @@ app.controller('ctrl', function ($scope) {
                 }
             }
         }
-    ];
+    ];*/
     $scope.attributes = [
         {
             str: 2,

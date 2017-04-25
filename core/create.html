@@ -18,8 +18,8 @@
     <meta charset="UTF-8">
     <title>Create Character Manual Mode</title>
 </head>
-<body class="manualCreate">
-    <div class="container" ng-app="app" ng-controller="ctrl">
+<body class="manualCreate" ng-app="app" ng-controller="ctrl">
+    <div class="container">
         <h2 class="charName">
             Create your Own Character
         </h2>
@@ -62,12 +62,12 @@
                 </li>
             </ul>
         </div>
-        <h3 class="seperator">
+        <h3 class="separator">
             Character Stats
         </h3>
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <p>
                         Level {{level}}
                         <button ng-click="decLevel()">
@@ -84,22 +84,11 @@
                         Max Influence {{influence}}
                     </p>
                 </div>
-                <div class="col-md-6">
-                    <p>
-
-                    </p>
-                    <p>
-                        Curret Res
-                    </p>
-                    <p>
-                        Current Inf
-                    </p>
-                </div>
             </div>
         </div>
         <div class="container">
             <div class="row">
-                <h3 class="Seperator">
+                <h3 class="Separator">
                     Attributes
                 </h3>
                 <div class="col-md-6">
@@ -221,6 +210,11 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-12">
+            <h4>
+                Trait Points Available: {{traits}}
+            </h4>
+        </div>
         <div class="col-md-6">
             <table>
                 <th>
@@ -229,21 +223,21 @@
                 <tr>
                     <td>
                         <form>
-                            <input type="checkbox" ng-model="primarySkills.wealth" ng-disabled="maxPrimary()"> Wealth {{primarySkills.wealth}}
+                            <input type="checkbox" ng-model="primarySkills.wealth" ng-disabled="maxPrimary()" ng-change="changeNumSkills(primarySkills.wealth)"> Wealth {{primarySkills.wealth}}
                         </form>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <form>
-                            <input type="checkbox" ng-model="primarySkills.conversation" ng-disabled="maxPrimary()"> Conversation {{primarySkills.conversation}}
+                            <input type="checkbox" ng-model="primarySkills.conversation" ng-disabled="maxPrimary()" ng-change="changeNumSkills(primarySkills.conversation)"> Conversation {{primarySkills.conversation}}
                         </form>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <form>
-                            <input type="checkbox" ng-model="primarySkills.leadership" ng-disabled="maxPrimary()"> Leadership {{primarySkills.leadership}}
+                            <input type="checkbox" ng-model="primarySkills.leadership" ng-disabled="maxPrimary()" ng-change="changeNumSkills(primarySkills.leadership)"> Leadership {{primarySkills.leadership}}
                         </form>
                     </td>
                 </tr>
