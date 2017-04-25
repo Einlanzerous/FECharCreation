@@ -20,15 +20,18 @@ app.controller('ctrl', function ($scope) {
     $scope.focVal = 2;
     $scope.intVal = 2;
     $scope.perVal = 2;
-    $scope.faeVal = 2;
+    $scope.fate = 2;
     $scope.level = 1;
     $scope.resources = 2 + $scope.level;
     $scope.currentRes = $scope.resources;
     $scope.influence = 2 + $scope.level;
     $scope.currentInf = $scope.influence;
-    $scope.totalAttr = 18;
+    $scope.totalAttr = 18 - $scope.strVal - $scope.rfxVal - $scope.movVal - $scope.focVal -$scope.intVal - $scope.perVal;
     $scope.traits = 1;
     $scope.numSkills = 0;
+    $scope.primarySkills = {wealth:false, conversation:false, leadership:false, culture:false, physical:false,
+        resolve:false, awareness:false, survival:false, mechanics:false, electronics: false, programming:false,
+        bio_tech:false, medicine:false, psychology:false, astronomy:false, planetoids:false};
 
     //Functions below
     $scope.limit = function (val) {
@@ -59,65 +62,79 @@ app.controller('ctrl', function ($scope) {
         }
     };
     $scope.addStr = function () {
-        $scope.strVal = $scope.strVal + 1;
-        $scope.strVal = $scope.limit($scope.strVal);
+        if ($scope.totalAttr > 0 && $scope.strVal < 5) {
+            $scope.totalAttr = $scope.totalAttr - 1;
+            $scope.strVal = $scope.strVal + 1;
+        }
     };
     $scope.remStr = function () {
-        $scope.strVal = $scope.strVal - 1;
-        $scope.strVal = $scope.limit($scope.strVal);
+        if ($scope.limit($scope.strVal)){
+            $scope.totalAttr = $scope.totalAttr + 1;
+            $scope.strVal = $scope.strVal - 1;
+        }
     };
     $scope.addRfx = function () {
-        $scope.rfxVal = $scope.rfxVal + 1;
-        $scope.rfxVal = $scope.limit($scope.rfxVal);
+        if ($scope.totalAttr > 0 && $scope.rfxVal < 5) {
+            $scope.totalAttr = $scope.totalAttr - 1;
+            $scope.rfxVal = $scope.rfxVal + 1;;
+        }
     };
     $scope.remRfx = function () {
-        $scope.rfxVal = $scope.rfxVal - 1;
-        $scope.rfxVal = $scope.limit($scope.rfxVal);
+        if ($scope.limit($scope.rfxVal)){
+            $scope.totalAttr = $scope.totalAttr + 1;
+            $scope.rfxVal = $scope.rfxVal - 1;
+        }
     };
     $scope.addMov = function () {
-        $scope.movVal = $scope.movVal + 1;
-        $scope.movVal = $scope.limit($scope.movVal);
+        if ($scope.totalAttr > 0 && $scope.movVal < 5) {
+            $scope.totalAttr = $scope.totalAttr - 1;
+            $scope.movVal = $scope.movVal + 1;
+        }
     };
     $scope.remMov = function () {
-        $scope.movVal = $scope.movVal - 1;
-        $scope.movVal = $scope.limit($scope.movVal);
+        if ($scope.limit($scope.movVal)){
+            $scope.totalAttr = $scope.totalAttr + 1;
+            $scope.movVal = $scope.movVal - 1;
+        }
     };
     $scope.addFoc = function () {
-        $scope.focVal = $scope.focVal + 1;
-        $scope.focVal = $scope.limit($scope.focVal);
+        if ($scope.totalAttr > 0 && $scope.focVal < 5) {
+            $scope.totalAttr = $scope.totalAttr - 1;
+            $scope.focVal = $scope.focVal + 1;
+        }
     };
     $scope.remFoc = function () {
-        $scope.focVal = $scope.focVal - 1;
-        $scope.focVal = $scope.limit($scope.focVal);
+        if ($scope.limit($scope.focVal)){
+            $scope.totalAttr = $scope.totalAttr + 1;
+            $scope.focVal = $scope.focVal - 1;
+        }
     };
     $scope.addInt = function () {
-        $scope.intVal = $scope.intVal + 1;
-        $scope.intVal = $scope.limit($scope.intVal);
+        if ($scope.totalAttr > 0 && $scope.intVal < 5) {
+            $scope.totalAttr = $scope.totalAttr - 1;
+            $scope.intVal = $scope.intVal + 1;
+        }
     };
     $scope.remInt = function () {
-        $scope.intVal = $scope.intVal - 1;
-        $scope.intVal = $scope.limit($scope.intVal);
+        if ($scope.limit($scope.intVal)){
+            $scope.totalAttr = $scope.totalAttr + 1;
+            $scope.intVal = $scope.intVal - 1;
+        }
     };
     $scope.addPer = function () {
-        $scope.perVal = $scope.perVal + 1;
-        $scope.perVal = $scope.limit($scope.perVal);
+        if ($scope.totalAttr > 0 && $scope.perVal < 5) {
+            $scope.totalAttr = $scope.totalAttr - 1;
+            $scope.perVal = $scope.perVal + 1;
+        }
     };
     $scope.remPer = function () {
-        $scope.perVal = $scope.perVal - 1;
-        $scope.perVal = $scope.limit($scope.perVal);
+        if ($scope.limit($scope.perVal)){
+            $scope.totalAttr = $scope.totalAttr + 1;
+            $scope.perVal = $scope.perVal - 1;
+        }
     };
-
-    //Test bed section for functions
-    $scope.primarySkills = {wealth:false, conversation:false, leadership:false, culture:false, physical:false,
-    resolve:false, awareness:false, survival:false, mechanics:false, electronics: false, programming:false,
-    bio_tech:false, medicine:false, psychology:false, astronomy:false, planetoids:false};
     $scope.maxPrimary = function (testVal) {
-        if ($scope.numSkills >= 2 && !testVal){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return $scope.numSkills >= 6 && !testVal;
     };
     $scope.changeNumSkills = function(skill) {
         if (skill){
@@ -127,6 +144,8 @@ app.controller('ctrl', function ($scope) {
             $scope.numSkills = $scope.numSkills - 1;
         }
     };
+
+    //Test bed section for functions
     /*$scope.traitList = [
         {
             skill: {
@@ -138,17 +157,4 @@ app.controller('ctrl', function ($scope) {
             }
         }
     ];*/
-    $scope.attributes = [
-        {
-            str: 2,
-            rfx: 2,
-            mov: 2,
-            foc: 2,
-            int: 2,
-            per: 2,
-            fae: 2
-        }];
-    $scope.addAttribute = function (attribute) {
-        $scope.attributes[attribute] = $scope.attributes[attribute] + 1;
-    }
 });
