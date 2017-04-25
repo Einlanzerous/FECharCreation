@@ -69,13 +69,19 @@
             <div class="row">
                 <div class="col-md-6">
                     <p>
-                        Level
+                        Level {{level}}
+                        <button ng-click="decLevel()">
+                            <i class="glyphicon-minus"></i>
+                        </button>
+                        <button ng-click="incLevel()">
+                            <i class="glyphicon-plus"></i>
+                        </button>
                     </p>
                     <p>
-                        Max Resources
+                        Max Resources {{resources}}
                     </p>
                     <p>
-                        Max Influence
+                        Max Influence {{influence}}
                     </p>
                 </div>
                 <div class="col-md-6">
@@ -182,6 +188,14 @@
                                 </button>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                Points remaining:
+                            </td>
+                            <td>
+                                {{totalAttr}}
+                            </td>
+                        </tr>
                     </table>
 
                 </div>
@@ -207,9 +221,242 @@
                 </div>
             </div>
         </div>
-        <todo>
-            Make two tables with col-md-6, will have checkboxs and limits (6x per char onprimary, 2x each on vehicle/personal)
-        </todo>
+        <div class="col-md-6">
+            <table>
+                <th>
+                    Primary Skills (6x)
+                </th>
+                <tr>
+                    <td>
+                        <form>
+                            <input type="checkbox" ng-model="primarySkills.wealth" ng-disabled="maxPrimary()"> Wealth {{primarySkills.wealth}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input type="checkbox" ng-model="primarySkills.conversation" ng-disabled="maxPrimary()"> Conversation {{primarySkills.conversation}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input type="checkbox" ng-model="primarySkills.leadership" ng-disabled="maxPrimary()"> Leadership {{primarySkills.leadership}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input type="checkbox" ng-model="primarySkills.culture" ng-disabled="maxPrimary()"> Culture {{primarySkills.culture}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.physical" ng-disabled="maxPrimary()"> Physical {{primarySkills.physical}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.resolve" ng-disabled="maxPrimary()"> Resolve {{primarySkills.resolve}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.awareness" ng-disabled="maxPrimary()"> Awareness {{primarySkills.awareness}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.survival" ng-disabled="maxPrimary()"> Survival {{primarySkills.survival}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        -
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.mechanics" ng-disabled="maxPrimary()"> Mechanics {{primarySkills.mechanics}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.electronics" ng-disabled="maxPrimary()"> Electronics {{primarySkills.electronics}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Programming {{primarySkills.programming}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.bio_tech" ng-disabled="maxPrimary()"> Bio Tech {{primarySkills.bio_tech}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.medicine" ng-disabled="maxPrimary()"> Medicine {{primarySkills.medicine}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.psychology" ng-disabled="maxPrimary()"> Psychology {{primarySkills.psychology}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.astronomy" ng-disabled="maxPrimary()"> Astronomy {{primarySkills.astronomy}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.planetoids" ng-disabled="maxPrimary()"> Planetoids {{primarySkills.planetoids}}
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <table>
+                <th>
+                    Personal Combat Skills (2x)
+                </th>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Small Arms {{primarySkills.programming}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Small Arms {{primarySkills.programming}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Heavy Arms {{primarySkills.programming}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Heavy Arms {{primarySkills.programming}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Tactical {{primarySkills.programming}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Tactical {{primarySkills.programming}}
+                        </form>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <table>
+                <th>
+                    Vehicle System Skills (2x)
+                </th>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Command {{primarySkills.programming}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Command {{primarySkills.programming}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Engineering {{primarySkills.programming}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Engineering {{primarySkills.programming}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Operations {{primarySkills.programming}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Operations {{primarySkills.programming}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Gunnery {{primarySkills.programming}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Gunnery {{primarySkills.programming}}
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
     <div class="container">
         <a href="index.html">

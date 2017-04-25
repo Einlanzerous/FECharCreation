@@ -20,6 +20,10 @@ app.controller('ctrl', function ($scope) {
     $scope.intVal = 2;
     $scope.perVal = 2;
     $scope.faeVal = 2;
+    $scope.level = 1;
+    $scope.resources = 2 + $scope.level;
+    $scope.influence = 2 + $scope.level;
+    $scope.totalAttr = 18;
     $scope.limit = function (val) {
         return (Math.min(5, Math.max(0, val)));
     };
@@ -28,6 +32,17 @@ app.controller('ctrl', function ($scope) {
     };
     $scope.remLang = function (x) {
         $scope.lang.splice(x, 1);
+    };
+    //Level functions will be changed over time
+    $scope.incLevel = function () {
+        $scope.level = $scope.level + 1;
+        $scope.resources = $scope.resources + 1;
+        $scope.influence = $scope.influence + 1;
+    };
+    $scope.decLevel = function () {
+        $scope.level = $scope.level - 1;
+        $scope.resources = $scope.resources -1;
+        $scope.influence = $scope.influence - 1;
     };
     $scope.addStr = function () {
         $scope.strVal = $scope.strVal + 1;
@@ -79,6 +94,53 @@ app.controller('ctrl', function ($scope) {
     };
 
     //Test bed section for functions
+    $scope.wealth = false;
+    $scope.primarySkills = [
+        {
+            wealth: false,
+            conversation: false,
+            leadership: false,
+            culture: false,
+            physical: false,
+            resolve: false,
+            awareness: false,
+            survival: false,
+            mechanics: false,
+            electronics: false,
+            programming: false,
+            bio_tech: false,
+            medicine: false,
+            psychology: false,
+            astronomy: false,
+            planetoids: false
+        }
+    ];
+    $scope.maxPrimary = function () {
+        counter = 0;
+
+        for (i = 0; i < primarySkills.length; i++) {
+            if (primarySkills[i] === true) {
+                counter++;
+            }
+
+            if (counter >= 2) {
+                return true;
+            }
+        }
+
+        return false;
+    };
+    $scope.traits = [
+        {
+            skill: {
+                type: "category",
+                theme: "narrow",
+                adjust: function() {
+                    //adjust stats
+                }
+            }
+        }
+    ];
     $scope.attributes = [
         {
             str: 2,
