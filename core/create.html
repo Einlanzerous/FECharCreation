@@ -350,42 +350,56 @@
                 <tr>
                     <td>
                         <form>
-                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Small Arms {{primarySkills.programming}}
+                            <input  type="checkbox" ng-model="combatSkills.smlArmsFrst" ng-disabled="maxCombat(combatSkills.smlArmsFrst)" ng-change="changeNumCombatSkills(combatSkills.smlArmsFrst)"> Small Arms {{combatSkills.smlArmsFrst}}
                         </form>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <form>
-                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Small Arms {{primarySkills.programming}}
+                            <input  type="checkbox" ng-model="combatSkills.smlArmsSec" ng-disabled="maxCombat(combatSkills.smlArmsSec)" ng-change="changeNumCombatSkills(combatSkills.smlArmsSec)"> Small Arms {{combatSkills.smlArmsSec}}
                         </form>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <form>
-                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Heavy Arms {{primarySkills.programming}}
+                            <input  type="checkbox" ng-model="combatSkills.hvyArmsFrst" ng-disabled="maxCombat(combatSkills.hvyArmsFrst)" ng-change="changeNumCombatSkills(combatSkills.hvyArmsFrst)"> Heavy Arms {{combatSkills.hvyArmsFrst}}
                         </form>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <form>
-                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Heavy Arms {{primarySkills.programming}}
+                            <input  type="checkbox" ng-model="combatSkills.hvyArmsSec" ng-disabled="maxCombat(combatSkills.hvyArmsSec)" ng-change="changeNumCombatSkills(combatSkills.hvyArmsSec)"> Heavy Arms {{combatSkills.hvyArmsSec}}
                         </form>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <form>
-                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Tactical {{primarySkills.programming}}
+                            <input  type="checkbox" ng-model="combatSkills.tactFrst" ng-disabled="maxCombat(combatSkills.tactFrst)" ng-change="changeNumCombatSkills(combatSkills.tactFrst)"> Tactical {{combatSkills.tactFrst}}
                         </form>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <form>
-                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Tactical {{primarySkills.programming}}
+                            <input  type="checkbox" ng-model="combatSkills.tactSec" ng-disabled="maxCombat(combatSkills.tactSec)" ng-change="changeNumCombatSkills(combatSkills.tactSec)"> Tactical {{combatSkills.tactSec}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="combatSkills.TactSec" ng-disabled="maxCombat(combatSkills.exoFrst)" ng-change="changeNumCombatSkills(combatSkills.exoFrst)"> Exotic {{combatSkills.exoFrst}}
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <input  type="checkbox" ng-model="combatSkills.TactSec" ng-disabled="maxCombat(combatSkills.exoSec)" ng-change="changeNumCombatSkills(combatSkills.exoSec)"> Exotic {{combatSkills.exoSec}}
                         </form>
                     </td>
                 </tr>
@@ -399,56 +413,56 @@
                 <tr>
                     <td>
                         <form>
-                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Command {{primarySkills.programming}}
+                            <input  type="checkbox" ng-model="vehicleSkills.cmdFrst" ng-disabled="maxVehicle(vehicleSkills.cmdFrst)" ng-change="changeNumVehicleSkills(vehicleSkills.cmdFrst)"> Command {{vehicleSkills.cmdFrst}}
                         </form>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <form>
-                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Command {{primarySkills.programming}}
+                            <input  type="checkbox" ng-model="vehicleSkills.cmdSec" ng-disabled="maxVehicle(vehicleSkills.cmdSec)" ng-change="changeNumVehicleSkills(vehicleSkills.cmdSec)"> Command {{vehicleSkills.cmdSec}}
                         </form>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <form>
-                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Engineering {{primarySkills.programming}}
+                            <input  type="checkbox" ng-model="vehicleSkills.engFrst" ng-disabled="maxVehicle(vehicleSkills.engFrst)" ng-change="changeNumVehicleSkills(vehicleSkills.engFrst)"> Engineering {{vehicleSkills.engFrst}}
                         </form>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <form>
-                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Engineering {{primarySkills.programming}}
+                            <input  type="checkbox" ng-model="vehicleSkills.engSec" ng-disabled="maxVehicle(vehicleSkills.engSec)" ng-change="changeNumVehicleSkills(vehicleSkills.engSec)"> Engineering {{vehicleSkills.engSec}}
                         </form>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <form>
-                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Operations {{primarySkills.programming}}
+                            <input  type="checkbox" ng-model="vehicleSkills.operFrst" ng-disabled="maxVehicle(vehicleSkills.operFrst)" ng-change="changeNumVehicleSkills(vehicleSkills.operFrst)"> Operations {{vehicleSkills.operFrst}}
                         </form>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <form>
-                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Operations {{primarySkills.programming}}
+                            <input  type="checkbox" ng-model="vehicleSkills.operSec" ng-disabled="maxVehicle(vehicleSkills.operSec)" ng-change="changeNumVehicleSkills(vehicleSkills.operSec)"> Operations {{vehicleSkills.operSec}}
                         </form>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <form>
-                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Gunnery {{primarySkills.programming}}
+                            <input  type="checkbox" ng-model="vehicleSkills.gunFrst" ng-disabled="maxVehicle(vehicleSkills.gunFrst)" ng-change="changeNumVehicleSkills(vehicleSkills.gunFrst)"> Gunnery {{vehicleSkills.gunFrst}}
                         </form>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <form>
-                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary()"> Gunnery {{primarySkills.programming}}
+                            <input  type="checkbox" ng-model="vehicleSkills.gunSec" ng-disabled="maxVehicle(vehicleSkills.gunSec)" ng-change="changeNumVehicleSkills(vehicleSkills.gunSec)"> Gunnery {{vehicleSkills.gunSec}}
                         </form>
                     </td>
                 </tr>

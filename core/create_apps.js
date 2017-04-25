@@ -32,6 +32,12 @@ app.controller('ctrl', function ($scope) {
     $scope.primarySkills = {wealth:false, conversation:false, leadership:false, culture:false, physical:false,
         resolve:false, awareness:false, survival:false, mechanics:false, electronics: false, programming:false,
         bio_tech:false, medicine:false, psychology:false, astronomy:false, planetoids:false};
+    $scope.numCombatSkills = 0;
+    $scope.combatSkills = {smlArmsFrst:false, smlArmsSec:false, hvyArmsFrst:false, hvyArmsSec:false, tactFrst:false,
+        tactSec:false, exoFrst:false, exoSec:false};
+    $scope.numVehicleSkills = 0;
+    $scope.vehicleSkills = {cmdFrst:false, cmdSec:false, engFrst:false, engSec:false, operFrst:false, operSec:false,
+        gunFrst:false, gunSec:false};
 
     //Functions below
     $scope.limit = function (val) {
@@ -136,14 +142,36 @@ app.controller('ctrl', function ($scope) {
     $scope.maxPrimary = function (testVal) {
         return $scope.numSkills >= 6 && !testVal;
     };
-    $scope.changeNumSkills = function(skill) {
-        if (skill){
+    $scope.maxCombat = function (testVal) {
+        return $scope.numCombatSkills >= 2 && !testVal;
+    };
+    $scope.maxVehicle = function (testVal) {
+        return $scope.numVehicleSkills >= 2 && !testVal;
+    };
+    $scope.changeNumSkills = function (skill) {
+        if (skill) {
             $scope.numSkills = $scope.numSkills + 1;
         }
         else {
             $scope.numSkills = $scope.numSkills - 1;
         }
     };
+    $scope.changeNumCombatSkills = function (skill) {
+        if (skill) {
+            $scope.numCombatSkills = $scope.numCombatSkills + 1;
+        }
+        else {
+            $scope.numCombatSkills = $scope.numCombatSkills - 1
+        }
+    }
+    $scope.changeNumVehicleSkills = function (skill) {
+        if (skill) {
+            $scope.numVehicleSkills = $scope.numVehicleSkills + 1;
+        }
+        else {
+            $scope.numVehicleSkills = $scope.numVehicleSkills - 1
+        }
+    }
 
     //Test bed section for functions
     /*$scope.traitList = [
