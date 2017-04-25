@@ -111,8 +111,8 @@ app.controller('ctrl', function ($scope) {
     $scope.primarySkills = {wealth:false, conversation:false, leadership:false, culture:false, physical:false,
     resolve:false, awareness:false, survival:false, mechanics:false, electronics: false, programming:false,
     bio_tech:false, medicine:false, psychology:false, astronomy:false, planetoids:false};
-    $scope.maxPrimary = function () {
-        if ($scope.numSkills >= 6){
+    $scope.maxPrimary = function (testVal) {
+        if ($scope.numSkills >= 2 && !testVal){
             return true;
         }
         else{
