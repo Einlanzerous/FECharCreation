@@ -11,8 +11,9 @@ var app = angular.module("app", []);
 app.controller('ctrl', function ($scope) {
     //Declare variables
     $scope.races = ["Corporation", "Kaltoran", "Legion", "Nephilim", "Palantor", "Remnant", "Twi-Far", "Zhou"];
-    $scope.name = "Test";
-    $scope.player = "Example";
+    $scope.selectedRace = "";
+    $scope.name = "Mysterious";
+    $scope.player = "Rando";
     $scope.lang = ["Corp."];
     $scope.strVal = 2;
     $scope.rfxVal = 2;
@@ -40,6 +41,9 @@ app.controller('ctrl', function ($scope) {
         gunFrst:false, gunSec:false};
 
     //Functions below
+    $scope.adjustRace = function() {
+
+    };
     $scope.limit = function (val) {
         return (Math.min(5, Math.max(0, val)));
     };
