@@ -16,12 +16,19 @@ app.controller('ctrl', function ($scope) {
     $scope.player = "Rando";
     $scope.lang = ["Corp."];
     $scope.strVal = 2;
+    $scope.strBon = 0;
     $scope.rfxVal = 2;
+    $scope.rfxBon = 0;
     $scope.movVal = 2;
+    $scope.movBon = 0;
     $scope.focVal = 2;
+    $scope.focBon = 0;
     $scope.intVal = 2;
+    $scope.intBon = 0;
     $scope.perVal = 2;
+    $scope.perBon = 0;
     $scope.fate = 2;
+    $scope.fateBon = 0;
     $scope.level = 1;
     $scope.resources = 2 + $scope.level;
     $scope.currentRes = $scope.resources;
@@ -41,7 +48,15 @@ app.controller('ctrl', function ($scope) {
         gunFrst:false, gunSec:false};
 
     //Functions below
-    $scope.adjustRace = function() {
+    $scope.resetStates = function () {
+        $scope.totalAttr = 18 - 12;
+        $scope.strVal = $scope.strVal + $scope.strBon;
+        $scope.rfxVal = $scope.rfxVal + $scope.rfxVal;
+        $scope.movVal = $scope.movVal + $scope.movBon;
+        $scope.focVal = $scope.focVal + $scope.focBon;
+        $scope.intVal = $scope.intVal + $scope.intBon;
+        $scope.perVal = $scope.perVal + $scope.perBon;
+        //build reset parts for skills as well
 
     };
     $scope.limit = function (val) {
@@ -167,7 +182,7 @@ app.controller('ctrl', function ($scope) {
         else {
             $scope.numCombatSkills = $scope.numCombatSkills - 1
         }
-    }
+    };
     $scope.changeNumVehicleSkills = function (skill) {
         if (skill) {
             $scope.numVehicleSkills = $scope.numVehicleSkills + 1;
@@ -175,7 +190,51 @@ app.controller('ctrl', function ($scope) {
         else {
             $scope.numVehicleSkills = $scope.numVehicleSkills - 1
         }
-    }
+    };
+    //Need to use racial bonus modifier
+    $scope.adjustRace = function() {
+        if ($scope.selectedRace === "Corporation") {
+            $scope.strVal = $scope.strVal - 2;
+            $scope.fate = $scope.fate - 1;
+            $scope.resources = $scope.resources + 2;
+            $scope.influence = $scope.influence + 2;
+            $scope.primarySkills.wealth = true;
+            $scope.combatSkills.tactSec = true;
+            $scope.vehicleSkills.operSec = true;
+            //Insert complication for Kaltorans
+        }
+        else if ($scope.selectedRace === "Kaltoran") {
+            $scope.fate = $scope.fate + 1;
+            $scope.primarySkills.awareness = true;
+            $scope.combatSkills.smlArmsSec = true;
+            $scope.vehicleSkills.cmdSec = true;
+            //Insert complication for Corporates
+        }
+        else if ($scope.selectedRace === "Legion") {
+            $scope.movVal = $scope.movVal - 2;
+            $scope.primarySkills.resolve = true;
+            $scope.combatSkills.hvyArmsSec = true;
+            $scope.vehicleSkills.gunSec = true;
+            //Additional complications need to be considered
+        }
+        else if ($scope.selectedRace === "Nephilim") {
+            $scope.primarySkills.bio_tech = true;
+            $scope.combatSkills.exoSec = true;
+            $scope.vehicleSkills.engSec = true;
+        }
+        else if ($scope.selectedRace === "Palantor") {
+
+        }
+        else if ($scope.selectedRace === "Remnant") {
+
+        }
+        else if ($scope.selectedRace === "Twi-Far") {
+
+        }
+        else if ($scope.selectedRace === "Zhou") {
+
+        }
+    };
 
     //Test bed section for functions
     /*$scope.traitList = [
