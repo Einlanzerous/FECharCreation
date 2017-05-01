@@ -235,44 +235,109 @@ app.controller('ctrl', function ($scope) {
             $scope.resources = $scope.resources + 2;
             $scope.influence = $scope.influence + 2;
             $scope.pSkillPoints[0]++;
-            $scope.combatSkills.tactSec = true;
-            $scope.vehicleSkills.operSec = true;
+            $scope.cSkillPoints[2]++;
+            $scope.vSkillPoints[2]++;
             //Insert complication for Kaltorans
         }
         else if ($scope.selectedRace === "Kaltoran") {
             $scope.fate = $scope.fate + 1;
-            $scope.primarySkills.awareness = true;
-            $scope.combatSkills.smlArmsSec = true;
-            $scope.vehicleSkills.cmdSec = true;
+            for (var i = 1; i < 16; i++) {
+                $scope.pSkillPoints[i] = -1;
+            }
+            $scope.pSkillPoints[0]--;
+            $scope.pSkillPoints[6]++;
+            $scope.cSkillPoints[0]++;
+            $scope.vSkillPoints[0]++;
             //Insert complication for Corporates
         }
         else if ($scope.selectedRace === "Legion") {
             $scope.movVal = $scope.movVal - 2;
-            $scope.primarySkills.resolve = true;
-            $scope.combatSkills.hvyArmsSec = true;
-            $scope.vehicleSkills.gunSec = true;
+            $scope.pSkillPoints[5]++;
+            $scope.cSkillPoints[1]++;
+            $scope.vSkillPoints[3]++;
+            $scope.lang.push("Legion");
             //Additional complications need to be considered
         }
         else if ($scope.selectedRace === "Nephilim") {
-            $scope.primarySkills.bio_tech = true;
-            $scope.combatSkills.exoSec = true;
-            $scope.vehicleSkills.engSec = true;
+            $scope.pSkillPoints[11]++;
+            $scope.pSkillPoints[1]--;
+            $scope.pSkillPoints[3] = $scope.pSkillPoints[3] - 2;
+            $scope.cSkillPoints[3]++;
+            $scope.vSkillPoints[1]++;
+            //Insert complication for Kaltorans and Legion
         }
         else if ($scope.selectedRace === "Palantor") {
-
+            //You are a robot!
+            //Gain a professional skill, Secret Knowledge or moderate Perk
+            //Max int at 3
+            $scope.pSkillPoints[10]++;
+            $scope.cSkillPoints[2]++;
+            $scope.vSkillPoints[1]++;
+            $scope.pSkillPoints[12] = $scope.pSkillPoints[12] - 2;
+            //Add complications around psycological condition and Remnant
         }
         else if ($scope.selectedRace === "Remnant") {
-
+            $scope.totalAttr = $scope.totalAttr + 2;
+            $scope.pSkillPoints[13]++;
+            $scope.cSkillPoints[0]++;
+            $scope.vSkillPoints[3]++;
+            $scope.lang.push("Ursai");
+            //Need race maxes to reflex and perception
+            //Complications from Corporation and Legion
+            //Other tweaks need to summarized in race info tag or something
         }
         else if ($scope.selectedRace === "Twi-Far") {
-
+            $scope.pSkillPoints[14]++;
+            $scope.cSkillPoints[1]++;
+            $scope.vSkillPoints[0]++;
+            $scope.vSkillPoints[2]++;
+            $scope.lang.push("Twilinger");
+            //A lot of race information needs to be handed off
         }
         else if ($scope.selectedRace === "Zhou") {
-
+            $scope.pSkillPoints[4]++;
+            $scope.pSkillPoints[7]++;
+            $scope.cSkillPoints[3]++;
+            $scope.pSkillPoints[9] = Scope.pSkillPoints[9] - 2;
+            $scope.pSkillPoints[10] = $scope.pSkillPoints[10] - 2;
+            //Complication from Nephilim
+            //A lot of race information needs to be handed off
         }
     };
 
     //Test bed section for functions
+    $scope.primarySkillList = {
+        wealth: ["Finance", "Money", "Macroeconomics", "Contracts", "Trade"],
+        conversation: ["Diplomacy", "Rumours", "High Society", "Inquiry", "Deception (acting)"],
+        leadership: ["Command", "Interrogation", "Oratory", "Intimidation", "Teamwork"],
+        culture: ["Customs (language)", "Governments and Organizations", "Legalese (bureaucratic/legal)", "Ideologies", "Archaeology (history)"],
+        physical: ["Resilience", "Athletics", "Acrobatics", "Endurance", "Brawn"],
+        resolve: ["Bravery", "Conviction", "Self-reflection", "Perseverance", "Psionics"],
+        awareness: ["Seeing", "Hearing", "Insight", "Searching", "Investigation"],
+        survival: ["Survival", "Salvaging", "Improvising", "Cooking", "Tracking"]
+    };
+    $scope.professionnalSkillList = {
+        mechanics: ["Mechanical Engineering","Hydraulics", "Chemical Engineering", "Architecture"],
+        electronics: ["Digital Electronics", "Electrical Engineering", "Applied Physics", "Telecommunications", "Optics"],
+        programming: ["Software Engineering", "Hacking", "Artificial Intelligence", "Security Systems", "Datastream"],
+        bio_tech: ["Genetic Engineering", "Bio-Weaponry", "Biological Systems", "Bio-Chemistry", "Augmentation"],
+        medicine: ["Medical Care", "Pharmacology", "Surgery", "Physiotherapy", "Anatomy"],
+        Psychology: ["Psionchology", "Psychology", "Psychiatry", "Synaptronics", "Behavioural Science"],
+        astronomy: ["Navigation", "Cosmology", "Ley Lines", "Stellar Science", "Gravitation"],
+        planetoids: ["Flora and Fauna", "Geology", "Meteorology", "Ecosystems", "Magnets"]
+    };
+    $scope.combatSkillList = {
+        smallArms: ["Pistols", "Sub-machine Guns", "Rifles", "Assault Rifles", "Shotguns"],
+        heavyArms: ["Grenades", "Grenade Launchers", "Satchels", "Cannons", "Auto Cannons", "Chemical Throwers"],
+        tactical: ["Your Mind", "Targeting Lasers", "Tactical Computers", "Turrets", "Swarm Drones", "Combat Drones", "Assault Drones", "Electro-Gravity Gauntlets", "Disruptor Rifles"],
+        exotic: ["Melee", "Prototype", "Other"]
+    };
+    $scope.vehicleSkillList = {
+        command: ["Boarding Parties", "Bomber Squads", "Combat Squads", "Sentries"],
+        engineering: ["Shields", "Power Systems", "Repair"],
+        operations: ["Swarm Warheads", "Missiles", "Rockets", "Torpedoes", "Mines"],
+        gunnery: ["Point Defenses", "Blasters", "Burst Batteries", "Artillery"]
+    }
     /*$scope.traitList = [
         {
             skill: {

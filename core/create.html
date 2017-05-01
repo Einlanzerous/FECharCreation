@@ -222,179 +222,181 @@
             </h4>
         </div>
         <div class="col-md-6">
-            <table>
-                <th>
-                    Primary Skills (6x)
-                </th>
-                <th>
-                    Bonus Roll
-                </th>
-                <tr>
-                    <td>
-                        <form>
-                            <input type="checkbox" ng-model="primarySkills.wealth" ng-disabled="maxPrimary(primarySkills.wealth)" ng-change="changeNumSkills(primarySkills.wealth)"> Wealth
-                        </form>
-                    </td>
-                    <td>
-                        {{pSkillPoints[0]}}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <form>
-                            <input type="checkbox" ng-model="primarySkills.conversation" ng-disabled="maxPrimary(primarySkills.conversation)" ng-change="changeNumSkills(primarySkills.conversation)"> Conversation
-                        </form>
-                    </td>
-                    <td>
-                        {{pSkillPoints[1]}}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <form>
-                            <input type="checkbox" ng-model="primarySkills.leadership" ng-disabled="maxPrimary(primarySkills.leadership)" ng-change="changeNumSkills(primarySkills.leadership)"> Leadership
-                        </form>
-                    </td>
-                    <td>
-                        {{pSkillPoints[2]}}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <form>
-                            <input type="checkbox" ng-model="primarySkills.culture" ng-disabled="maxPrimary(primarySkills.culture)" ng-change="changeNumSkills(primarySkills.culture)"> Culture
-                        </form>
-                    </td>
-                    <td>
-                        {{pSkillPoints[3]}}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <form>
-                            <input  type="checkbox" ng-model="primarySkills.physical" ng-disabled="maxPrimary(primarySkills.physical)" ng-change="changeNumSkills(primarySkills.physical)"> Physical
-                        </form>
-                    </td>
-                    <td>
-                        {{pSkillPoints[4]}}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <form>
-                            <input  type="checkbox" ng-model="primarySkills.resolve" ng-disabled="maxPrimary(primarySkills.resolve)" ng-change="changeNumSkills(primarySkills.resolve)"> Resolve
-                        </form>
-                    </td>
-                    <td>
-                        {{pSkillPoints[5]}}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <form>
-                            <input  type="checkbox" ng-model="primarySkills.awareness" ng-disabled="maxPrimary(primarySkills.awareness)" ng-change="changeNumSkills(primarySkills.awareness)"> Awareness
-                        </form>
-                    </td>
-                    <td>
-                        {{pSkillPoints[6]}}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <form>
-                            <input  type="checkbox" ng-model="primarySkills.survival" ng-disabled="maxPrimary(primarySkills.survival)" ng-change="changeNumSkills(primarySkills.survival)"> Survival
-                        </form>
-                    </td>
-                    <td>
-                        {{pSkillPoints[7]}}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        -
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <form>
-                            <input  type="checkbox" ng-model="primarySkills.mechanics" ng-disabled="maxPrimary(primarySkills.mechanics)" ng-change="changeNumSkills(primarySkills.mechanics)"> Mechanics
-                        </form>
-                    </td>
-                    <td>
-                        {{pSkillPoints[8]}}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <form>
-                            <input  type="checkbox" ng-model="primarySkills.electronics" ng-disabled="maxPrimary(primarySkills.electronics)" ng-change="changeNumSkills(primarySkills.electronics)"> Electronics
-                        </form>
-                    </td>
-                    <td>
-                        {{pSkillPoints[9]}}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <form>
-                            <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary(primarySkills.programming)" ng-change="changeNumSkills(primarySkills.programming)"> Programming
-                        </form>
-                    </td>
-                    <td>
-                        {{pSkillPoints[10]}}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <form>
-                            <input  type="checkbox" ng-model="primarySkills.bio_tech" ng-disabled="maxPrimary(primarySkills.bio_tech)" ng-change="changeNumSkills(primarySkills.bio_tech)"> Bio Tech
-                        </form>
-                    </td>
-                    <td>
-                        {{pSkillPoints[11]}}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <form>
-                            <input  type="checkbox" ng-model="primarySkills.medicine" ng-disabled="maxPrimary(primarySkills.medicine)" ng-change="changeNumSkills(primarySkills.medicine)"> Medicine
-                        </form>
-                    </td>
-                    <td>
-                        {{pSkillPoints[12]}}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <form>
-                            <input  type="checkbox" ng-model="primarySkills.psychology" ng-disabled="maxPrimary(primarySkills.psychology)" ng-change="changeNumSkills(primarySkills.psychology)"> Psychology
-                        </form>
-                    </td>
-                    <td>
-                        {{pSkillPoints[13]}}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <form>
-                            <input  type="checkbox" ng-model="primarySkills.astronomy" ng-disabled="maxPrimary(primarySkills.astronomy)" ng-change="changeNumSkills(primarySkills.astronomy)"> Astronomy
-                        </form>
-                    </td>
-                    <td>
-                        {{pSkillPoints[14]}}
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <form>
-                            <input  type="checkbox" ng-model="primarySkills.planetoids" ng-disabled="maxPrimary(primarySkills.planetoids)" ng-change="changeNumSkills(primarySkills.planetoids)"> Planetoids
-                        </form>
-                    </td>
-                    <td>
-                        {{pSkillPoints[15]}}
-                    </td>
-                </tr>
-            </table>
+            <div>
+                <table>
+                    <th>
+                        Primary Skills (6x)
+                    </th>
+                    <th>
+                        Bonus Roll
+                    </th>
+                    <tr>
+                        <td>
+                            <form>
+                                <input type="checkbox" ng-model="primarySkills.wealth" ng-disabled="maxPrimary(primarySkills.wealth)" ng-change="changeNumSkills(primarySkills.wealth)"> Wealth
+                            </form>
+                        </td>
+                        <td>
+                            {{pSkillPoints[0]}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <input type="checkbox" ng-model="primarySkills.conversation" ng-disabled="maxPrimary(primarySkills.conversation)" ng-change="changeNumSkills(primarySkills.conversation)"> Conversation
+                            </form>
+                        </td>
+                        <td>
+                            {{pSkillPoints[1]}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <input type="checkbox" ng-model="primarySkills.leadership" ng-disabled="maxPrimary(primarySkills.leadership)" ng-change="changeNumSkills(primarySkills.leadership)"> Leadership
+                            </form>
+                        </td>
+                        <td>
+                            {{pSkillPoints[2]}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <input type="checkbox" ng-model="primarySkills.culture" ng-disabled="maxPrimary(primarySkills.culture)" ng-change="changeNumSkills(primarySkills.culture)"> Culture
+                            </form>
+                        </td>
+                        <td>
+                            {{pSkillPoints[3]}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <input  type="checkbox" ng-model="primarySkills.physical" ng-disabled="maxPrimary(primarySkills.physical)" ng-change="changeNumSkills(primarySkills.physical)"> Physical
+                            </form>
+                        </td>
+                        <td>
+                            {{pSkillPoints[4]}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <input  type="checkbox" ng-model="primarySkills.resolve" ng-disabled="maxPrimary(primarySkills.resolve)" ng-change="changeNumSkills(primarySkills.resolve)"> Resolve
+                            </form>
+                        </td>
+                        <td>
+                            {{pSkillPoints[5]}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <input  type="checkbox" ng-model="primarySkills.awareness" ng-disabled="maxPrimary(primarySkills.awareness)" ng-change="changeNumSkills(primarySkills.awareness)"> Awareness
+                            </form>
+                        </td>
+                        <td>
+                            {{pSkillPoints[6]}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <input  type="checkbox" ng-model="primarySkills.survival" ng-disabled="maxPrimary(primarySkills.survival)" ng-change="changeNumSkills(primarySkills.survival)"> Survival
+                            </form>
+                        </td>
+                        <td>
+                            {{pSkillPoints[7]}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            -
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <input  type="checkbox" ng-model="primarySkills.mechanics" ng-disabled="maxPrimary(primarySkills.mechanics)" ng-change="changeNumSkills(primarySkills.mechanics)"> Mechanics
+                            </form>
+                        </td>
+                        <td>
+                            {{pSkillPoints[8]}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <input  type="checkbox" ng-model="primarySkills.electronics" ng-disabled="maxPrimary(primarySkills.electronics)" ng-change="changeNumSkills(primarySkills.electronics)"> Electronics
+                            </form>
+                        </td>
+                        <td>
+                            {{pSkillPoints[9]}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <input  type="checkbox" ng-model="primarySkills.programming" ng-disabled="maxPrimary(primarySkills.programming)" ng-change="changeNumSkills(primarySkills.programming)"> Programming
+                            </form>
+                        </td>
+                        <td>
+                            {{pSkillPoints[10]}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <input  type="checkbox" ng-model="primarySkills.bio_tech" ng-disabled="maxPrimary(primarySkills.bio_tech)" ng-change="changeNumSkills(primarySkills.bio_tech)"> Bio Tech
+                            </form>
+                        </td>
+                        <td>
+                            {{pSkillPoints[11]}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <input  type="checkbox" ng-model="primarySkills.medicine" ng-disabled="maxPrimary(primarySkills.medicine)" ng-change="changeNumSkills(primarySkills.medicine)"> Medicine
+                            </form>
+                        </td>
+                        <td>
+                            {{pSkillPoints[12]}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <input  type="checkbox" ng-model="primarySkills.psychology" ng-disabled="maxPrimary(primarySkills.psychology)" ng-change="changeNumSkills(primarySkills.psychology)"> Psychology
+                            </form>
+                        </td>
+                        <td>
+                            {{pSkillPoints[13]}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <input  type="checkbox" ng-model="primarySkills.astronomy" ng-disabled="maxPrimary(primarySkills.astronomy)" ng-change="changeNumSkills(primarySkills.astronomy)"> Astronomy
+                            </form>
+                        </td>
+                        <td>
+                            {{pSkillPoints[14]}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <input  type="checkbox" ng-model="primarySkills.planetoids" ng-disabled="maxPrimary(primarySkills.planetoids)" ng-change="changeNumSkills(primarySkills.planetoids)"> Planetoids
+                            </form>
+                        </td>
+                        <td>
+                            {{pSkillPoints[15]}}
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
         <div class="col-md-6">
             <table>
