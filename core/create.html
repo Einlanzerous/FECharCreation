@@ -42,7 +42,7 @@
                 <li>
                     <div>
                         Race:
-                        <select ng-model="selectedRace" ng-options="x for x in races">
+                        <select ng-model="selectedRace" ng-options="x for x in races" ng-click="adjustRace()">
 
                         </select>
                     </div>
@@ -63,7 +63,7 @@
             </ul>
         </div>
         <div class="container">
-            <button ng-click="adjustRace()">Click to change race bonuses</button> <i>Note: this will resert attributes</i>
+            <i>Note changing race will reset page!</i>
         </div>
         <h3 class="separator">
             Character Stats

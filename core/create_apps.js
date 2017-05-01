@@ -16,19 +16,12 @@ app.controller('ctrl', function ($scope) {
     $scope.player = "Rando";
     $scope.lang = ["Corp."];
     $scope.strVal = 2;
-    $scope.strBon = 0;
     $scope.rfxVal = 2;
-    $scope.rfxBon = 0;
     $scope.movVal = 2;
-    $scope.movBon = 0;
     $scope.focVal = 2;
-    $scope.focBon = 0;
     $scope.intVal = 2;
-    $scope.intBon = 0;
     $scope.perVal = 2;
-    $scope.perBon = 0;
     $scope.fate = 2;
-    $scope.fateBon = 0;
     $scope.level = 1;
     $scope.resources = 2 + $scope.level;
     $scope.currentRes = $scope.resources;
@@ -40,6 +33,7 @@ app.controller('ctrl', function ($scope) {
     $scope.primarySkills = {wealth:false, conversation:false, leadership:false, culture:false, physical:false,
         resolve:false, awareness:false, survival:false, mechanics:false, electronics: false, programming:false,
         bio_tech:false, medicine:false, psychology:false, astronomy:false, planetoids:false};
+    $scope.pSkillPoints = [];
     $scope.numCombatSkills = 0;
     $scope.combatSkills = {smlArmsFrst:false, smlArmsSec:false, hvyArmsFrst:false, hvyArmsSec:false, tactFrst:false,
         tactSec:false, exoFrst:false, exoSec:false};
@@ -50,14 +44,48 @@ app.controller('ctrl', function ($scope) {
     //Functions below
     $scope.resetStates = function () {
         $scope.totalAttr = 18 - 12;
-        $scope.strVal = $scope.strVal + $scope.strBon;
-        $scope.rfxVal = $scope.rfxVal + $scope.rfxVal;
-        $scope.movVal = $scope.movVal + $scope.movBon;
-        $scope.focVal = $scope.focVal + $scope.focBon;
-        $scope.intVal = $scope.intVal + $scope.intBon;
-        $scope.perVal = $scope.perVal + $scope.perBon;
-        //build reset parts for skills as well
+        $scope.strVal = 2;
+        $scope.rfxVal = 2;
+        $scope.movVal = 2;
+        $scope.focVal = 2;
+        $scope.intVal = 2;
+        $scope.perVal = 2;
+        $scope.fate = 2;
+        $scope.resources = 2 + $scope.level;
+        $scope.currentRes = $scope.resources;
+        $scope.influence = 2 + $scope.level;
+        $scope.currentInf = $scope.influence;
 
+        for (var i = 0; i < 16; i++) {
+            $scope.pSkillPoints[i] = -2;
+        }
+
+        $scope.primarySkills.wealth = false;
+        $scope.primarySkills.conversation = false;
+        $scope.primarySkills.leadership = false;
+        $scope.primarySkills.culture = false;
+        $scope.primarySkills.physical = false;
+        $scope.primarySkills.resolve = false;
+        $scope.primarySkills.awareness = false;
+        $scope.primarySkills.survival = false;
+        $scope.primarySkills.mechanics = false;
+        $scope.primarySkills.electronics = false;
+        $scope.primarySkills.programming = false;
+        $scope.primarySkills.bio_tech = false;
+        $scope.primarySkills.medicine = false;
+        $scope.primarySkills.psychology = false;
+        $scope.primarySkills.astronomy = false;
+        $scope.primarySkills.planetoids = false;
+
+        $scope.combatSkills.smlArmsSec = false;
+        $scope.combatSkills.hvyArmsSec = false;
+        $scope.combatSkills.tactSec = false;
+        $scope.combatSkills.exoSec = false;
+
+        $scope.vehicleSkills.cmdSec = false;
+        $scope.vehicleSkills.engSec = false;
+        $scope.vehicleSkills.operSec = false;
+        $scope.vehicleSkills.gunSec = false;
     };
     $scope.limit = function (val) {
         return (Math.min(5, Math.max(0, val)));
@@ -193,6 +221,8 @@ app.controller('ctrl', function ($scope) {
     };
     //Need to use racial bonus modifier
     $scope.adjustRace = function() {
+        $scope.resetStates();
+
         if ($scope.selectedRace === "Corporation") {
             $scope.strVal = $scope.strVal - 2;
             $scope.fate = $scope.fate - 1;
