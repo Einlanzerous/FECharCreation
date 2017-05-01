@@ -37,9 +37,11 @@ app.controller('ctrl', function ($scope) {
     $scope.numCombatSkills = 0;
     $scope.combatSkills = {smlArmsFrst:false, smlArmsSec:false, hvyArmsFrst:false, hvyArmsSec:false, tactFrst:false,
         tactSec:false, exoFrst:false, exoSec:false};
+    $scope.cSkillPoints = [];
     $scope.numVehicleSkills = 0;
     $scope.vehicleSkills = {cmdFrst:false, cmdSec:false, engFrst:false, engSec:false, operFrst:false, operSec:false,
         gunFrst:false, gunSec:false};
+    $scope.vSkillPoints = [];
 
     //Functions below
     $scope.resetStates = function () {
@@ -58,6 +60,10 @@ app.controller('ctrl', function ($scope) {
 
         for (var i = 0; i < 16; i++) {
             $scope.pSkillPoints[i] = -2;
+            if (i < 4) {
+                $scope.cSkillPoints[i] = -2;
+                $scope.vSkillPoints[i] = -2;
+            }
         }
 
         $scope.primarySkills.wealth = false;
@@ -228,7 +234,7 @@ app.controller('ctrl', function ($scope) {
             $scope.fate = $scope.fate - 1;
             $scope.resources = $scope.resources + 2;
             $scope.influence = $scope.influence + 2;
-            $scope.primarySkills.wealth = true;
+            $scope.pSkillPoints[0]++;
             $scope.combatSkills.tactSec = true;
             $scope.vehicleSkills.operSec = true;
             //Insert complication for Kaltorans
