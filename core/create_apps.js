@@ -324,7 +324,7 @@ app.controller('ctrl', function ($scope) {
         programming: ["Software Engineering", "Hacking", "Artificial Intelligence", "Security Systems", "Datastream"],
         bio_tech: ["Genetic Engineering", "Bio-Weaponry", "Biological Systems", "Bio-Chemistry", "Augmentation"],
         medicine: ["Medical Care", "Pharmacology", "Surgery", "Physiotherapy", "Anatomy"],
-        Psychology: ["Psionchology", "Psychology", "Psychiatry", "Synaptronics", "Behavioural Science"],
+        psychology: ["Psionchology", "Psychology", "Psychiatry", "Synaptronics", "Behavioural Science"],
         astronomy: ["Navigation", "Cosmology", "Ley Lines", "Stellar Science", "Gravitation"],
         planetoids: ["Flora and Fauna", "Geology", "Meteorology", "Ecosystems", "Magnets"]
     };

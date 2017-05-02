@@ -48,21 +48,15 @@
                     </div>
                 </li>
                 <li>
-                    <div ng-repeat="x in lang">
-                        Languages: {{x}}
-                        <span ng-click="remLang($index)">&times;</span>
-                    </div>
-                </li>
-                <li>
                     <div>
-                        <input ng-model="addMe"><button ng-click="addLang()">
-                        Add
-                    </button>
+                        <button ng-click="addLang()">
+                            Add Language
+                        </button>
+                        <input ng-model="addMe">
                     </div>
                 </li>
             </ul>
-        </div>
-        <div class="container">
+
             <i>Note changing race will reset page!</i>
         </div>
         <h3 class="separator">
@@ -70,7 +64,7 @@
         </h3>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <p>
                         Level {{level}}
                         <button ng-click="decLevel()">
@@ -89,6 +83,21 @@
                     <p>
                         Fate: {{fate}}
                     </p>
+                    <p ng-repeat="x in lang">
+                        Languages: {{x}} <span ng-click="remLang($index)">&times;</span>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <table>
+                        <tr>
+                            <th>
+                                Race Information
+                            </th>
+                            <td class="raceInformation">
+
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -97,8 +106,8 @@
                 <h3 class="Separator">
                     Attributes
                 </h3>
-                <div class="col-md-6">
-                    <table>
+                <div class="col-md-8">
+                    <table class="table">
                         <tr>
                             <td>
                                 Strength:
@@ -194,7 +203,7 @@
                     </table>
 
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <p>
                         Perks
                     </p>
@@ -223,14 +232,14 @@
         </div>
         <div class="col-md-6">
             <div>
-                <table>
-                    <th>
+                <table class="table">
+                    <th class="col-md-4">
                         Primary Skills (6x)
                     </th>
-                    <th>
+                    <th class="col-md-2">
                         Bonus Roll
                     </th>
-                    <th>
+                    <th class="col-md-6">
                         Selected Skill
                     </th>
                     <tr>
@@ -337,11 +346,17 @@
                             <select ng-model="primarySkills.survival" ng-options="x for x in primarySkillList.survival"></select>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            -
-                        </td>
-                    </tr>
+                </table>
+                <table class="table">
+                    <th class="col-md-4">
+                        Primary Skills (6x)
+                    </th>
+                    <th class="col-md-2">
+                        Bonus Roll
+                    </th>
+                    <th class="col-md-6">
+                        Selected Skill
+                    </th>
                     <tr>
                         <td>
                             <form>
@@ -450,12 +465,15 @@
             </div>
         </div>
         <div class="col-md-6">
-            <table>
-                <th>
+            <table class="table">
+                <th class="col-md-5">
                     Personal Combat Skills (2x)
                 </th>
-                <th>
-                    Bonus Roll
+                <th class="col-md-2">
+                    Roll
+                </th>
+                <th class="col-md-5">
+                    Selected Skill
                 </th>
                 <tr>
                     <td>
@@ -562,12 +580,15 @@
                     </td>
                 </tr>
             </table>
-            <table>
-                <th>
+            <table class="table">
+                <th class="col-md-5">
                     Vehicle System Skills (2x)
                 </th>
-                <th>
-                    Bonus Roll
+                <th class="col-md-2">
+                    Roll
+                </th>
+                <th class="col-md-5">
+                    Selected Skill
                 </th>
                 <tr>
                     <td>
