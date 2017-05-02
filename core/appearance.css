@@ -42,11 +42,12 @@ h1{
 .title{
     position: fixed;
     bottom: 0px;
-    padding: 0px;
+    padding: 10px;
     height: 33%;
     width: 100%;
     background-color: #333333;
     text-align: center;
+    vertical-align: middle;
 }
 .banner {
     height: 13%;
