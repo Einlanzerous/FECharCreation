@@ -3,8 +3,14 @@ html{
     padding: 0px;
 }
 
-body {
+.mainPage {
     background-image: url("Images/Background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.teamPage {
+    background-image: url("Images/team_test.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -107,4 +113,24 @@ p {
 
 #stats {
     list-style-type: none;
+}
+
+.jumbotron {
+    height: 250px;
+}
+
+.panel-transparent {
+    background: none;
+}
+
+.panel-transparent .panel-heading{
+    background-color: #55AACC;
+    text-align: right;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.panel-transparent .panel-body{
+    background: rgba(50, 50, 50, 0.6);
+    color: #FFFFFF;
 }
