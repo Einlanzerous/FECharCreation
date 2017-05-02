@@ -58,6 +58,8 @@ app.controller('ctrl', function ($scope) {
         $scope.influence = 2 + $scope.level;
         $scope.currentInf = $scope.influence;
 
+        $scope.lang = ["Corp"];
+
         for (var i = 0; i < 16; i++) {
             $scope.pSkillPoints[i] = -2;
             if (i < 4) {
@@ -316,7 +318,7 @@ app.controller('ctrl', function ($scope) {
         awareness: ["Seeing", "Hearing", "Insight", "Searching", "Investigation"],
         survival: ["Survival", "Salvaging", "Improvising", "Cooking", "Tracking"]
     };
-    $scope.professionnalSkillList = {
+    $scope.professionalSkillList = {
         mechanics: ["Mechanical Engineering","Hydraulics", "Chemical Engineering", "Architecture"],
         electronics: ["Digital Electronics", "Electrical Engineering", "Applied Physics", "Telecommunications", "Optics"],
         programming: ["Software Engineering", "Hacking", "Artificial Intelligence", "Security Systems", "Datastream"],
