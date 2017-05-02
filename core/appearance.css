@@ -92,11 +92,12 @@ p {
 
 .btn {
     text-decoration: none;
+    text-align: center;
     color: #FFFFFF;
     background-color: #555555;
     font-size: 18px;
     text-transform: uppercase;
-    width: 200px;
+    width: 215px;
     border-radius: 0px;
     padding: 10px 20px;
     border: 1px solid #000000;
@@ -105,6 +106,12 @@ p {
 .btn:hover {
     background-color: #666;
     border: 1px solid #FFF;
+}
+
+.home_btn {
+    text-align: center;
+    display: block;
+    padding-bottom: 15px;
 }
 
 .manualCreate {
@@ -118,6 +125,8 @@ p {
 
 .jumbotron {
     height: 250px;
+    background-color: #051525;
+    color: #FFFFFF;
 }
 
 .panel-transparent {

@@ -50,3 +50,28 @@ a {
     color: #333333;
 }
 
+.race_title {
+    text-align: center;
+}
+
+.img-thumbnail {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.panel-transparent {
+    background: none;
+}
+
+.panel-transparent .panel-heading {
+    background-color: #55AACC;
+    text-align: right;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.panel-transparent .panel-body {
+    background-color: rgba(50, 50, 50, 0.6);
+    color: #FFFFFF;
+}
