@@ -50,10 +50,6 @@ a {
     color: #333333;
 }
 
-.race_title {
-    text-align: center;
-}
-
 .img-thumbnail {
     display: block;
     margin-left: auto;
@@ -78,8 +74,14 @@ a {
 
 .raceName {
     text-align: center;
+    color: #FFFFFF;
+}
+
+.raceDetails {
+    text-align: center;
+    color: #FFFFFF;
 }
 
 .well {
-    background-color: #555555;
+    background-color: rgba(50, 50, 50, 0.6);
 }
