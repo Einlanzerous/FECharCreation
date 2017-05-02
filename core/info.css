@@ -75,3 +75,11 @@ a {
     background-color: rgba(50, 50, 50, 0.6);
     color: #FFFFFF;
 }
+
+.raceName {
+    text-align: center;
+}
+
+.well {
+    background-color: #555555;
+}
