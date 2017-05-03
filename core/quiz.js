@@ -21,9 +21,6 @@ app.controller('quizCtrl', function ($scope) {
         $scope.results = [$scope.question1, $scope.question2, $scope.question3, $scope.question4, $scope.question5, $scope.question6, $scope.question7];
         console.log($scope.results);
     };
-    $scope.test = function() {
-        console.log("Just another test");
-    };
 
     $scope.find_results = function () {
         console.log("Is this starting?");
