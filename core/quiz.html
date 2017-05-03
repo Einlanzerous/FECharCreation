@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link href="appearance.css" rel='stylesheet' type='text/css'>
 
 <!--
@@ -15,8 +14,250 @@
 <head>
     <meta charset="UTF-8">
     <title>Character Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body ng-app="quiz" ng-controller="quizCtrl">
+<div class="nav">
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a data-toggle="tab" href="#one">
+                Question 1
+            </a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#two">
+                Question 2
+            </a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#three">
+                Question 3
+            </a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#four">
+                Question 4
+            </a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#five">
+                Question 5
+            </a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#six">
+                Question 6
+            </a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#seven">
+                Question 7
+            </a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#final">
+                Results
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="tab-content">
+    <div id="one" class="tab-pane fade in active">
+        <div class="panel panel-primary panel-transparent">
+            <div class="panel-heading">
+                Question 1
+            </div>
+            <div class="panel-body">
+                <form>
+                    <h4>
+                        You are stranded on a strange world with a group of others- food is limited. Do you...
+                    </h4>
+                    <input type="radio" ng-model = question1 value="corp"> Sneak some of the food to try and barter off later.<br>
+                    <input type="radio" ng-model = question1 value="kalt"> Do I have family here? Because I'd provide for them first.<br>
+                    <input type="radio" ng-model = question1 value="legn"> It is my duty to ensure that the food is shared equally amongst all.<br>
+                    <input type="radio" ng-model = question1 value="neph"> I'd take what I like, and dare the others to stop me.<br>
+                    <input type="radio" ng-model = question1 value="pala"> I don't need to eat, hopefully I'm a machine.<br>
+                    <input type="radio" ng-model = question1 value="remn"> The food must be strictly rationed so that we may all survive.<br>
+                    <input type="radio" ng-model = question1 value="twif"> I'll have a bite for now, but I' sure I'll find more later during some exploration.<br>
+                    <input type="radio" ng-model = question1 value="zhou"> NOMNOMNOMNOM *various other eating sounds until the food is gone*<br>
+                </form>
+                <p>
+
+                </p>
+                <a data-toggle="tab" href="#two"><button type="button" class="btn btn-primary">Next</button></a>
+            </div>
+        </div>
+    </div>
+    <div id="two" class="tab-pane fade">
+        <div class="panel panel-primary panel-transparent">
+            <div class="panel-heading">
+                Question 2
+            </div>
+            <div class="panel-body">
+                <form>
+                    <h4>
+                        What is most important to you?
+                    </h4>
+                    <input type="radio" ng-model = question1 value="corp"> How much money and power I can obtain.<br>
+                    <input type="radio" ng-model = question1 value="kalt"> The bonds of family.<br>
+                    <input type="radio" ng-model = question1 value="legn"> My duty and honor.<br>
+                    <input type="radio" ng-model = question1 value="neph"> Perfecting myself- might makes right.<br>
+                    <input type="radio" ng-model = question1 value="pala"> Eradicating evil, discovering secrets.<br>
+                    <input type="radio" ng-model = question1 value="remn"> Spreading the word of our savior.<br>
+                    <input type="radio" ng-model = question1 value="twif"> Life is an adventure- it's important to live that way.<br>
+                    <input type="radio" ng-model = question1 value="zhou"> Eating- food, delicious food.<br>
+                </form>
+                <p>
+
+                </p>
+                <a data-toggle="tab" href="#three"><button type="button" class="btn btn-primary">Next</button></a>
+            </div>
+        </div>
+    </div>
+    <div id="three" class="tab-pane fade">
+        <div class="panel panel-primary panel-transparent">
+            <div class="panel-heading">
+                Question 3
+            </div>
+            <div class="panel-body">
+                <form>
+                    <h4>
+                        You've been having a fun time at a bar, but now a group of thugs are demanding you pay a "safety tax", do you...
+                    </h4>
+                    <input type="radio" ng-model = question1 value="corp"> Discuss a business opportunity to use their skills for your benefit.<br>
+                    <input type="radio" ng-model = question1 value="kalt"> I have my family- we'll put an end to this "safety tax".<br>
+                    <input type="radio" ng-model = question1 value="legn"> Give them some physical discouragement such things.<br>
+                    <input type="radio" ng-model = question1 value="neph"> Literally punch your hand through the leader's chest.<br>
+                    <input type="radio" ng-model = question1 value="pala"> Ignore them- you aren't concerned with such things.<br>
+                    <input type="radio" ng-model = question1 value="remn"> Explain to them the error of their ways, while pummelling them with your fists.<br>
+                    <input type="radio" ng-model = question1 value="twif"> Ask why you need to pay such a thing, and what it is used for.<br>
+                    <input type="radio" ng-model = question1 value="zhou"> See if they have food- eat it. Maybe eat them if not.<br>
+                </form>
+                <p>
+
+                </p>
+                <a data-toggle="tab" href="#four"><button type="button" class="btn btn-primary">Next</button></a>
+            </div>
+        </div>
+    </div>
+    <div id="four" class="tab-pane fade">
+        <div class="panel panel-primary panel-transparent">
+            <div class="panel-heading">
+                Question 4
+            </div>
+            <div class="panel-body">
+                <form>
+                    <h4>
+                        An "Angel" is attacking your group- how to do you handle it?
+                    </h4>
+                    <input type="radio" ng-model = question1 value="corp"> I have bodyguards for that.<br>
+                    <input type="radio" ng-model = question1 value="kalt"> I'll work as a group to overtake it- no sweat.<br>
+                    <input type="radio" ng-model = question1 value="legn"> Bring out the heavy weapons<br>
+                    <input type="radio" ng-model = question1 value="neph"> I'm unconcerned with this foe- I will show it who is stronger.<br>
+                    <input type="radio" ng-model = question1 value="pala"> That looks like a nice new body- I think I'll hack out the current occupant<br>
+                    <input type="radio" ng-model = question1 value="remn"> The Savior will protect me in battle.<br>
+                    <input type="radio" ng-model = question1 value="twif"> A bio-disintegrator cannon? That's cute, let me show you my energy blast<br>
+                    <input type="radio" ng-model = question1 value="zhou"> Can I eat this thing?<br>
+                </form>
+                <p>
+
+                </p>
+                <a data-toggle="tab" href="#five"><button type="button" class="btn btn-primary">Next</button></a>
+            </div>
+        </div>
+    </div>
+    <div id="five" class="tab-pane fade">
+        <div class="panel panel-primary panel-transparent">
+            <div class="panel-heading">
+                Question 5
+            </div>
+            <div class="panel-body">
+                <form>
+                    <h4>
+                        How would you go about acquiring a ship?
+                    </h4>
+                    <input type="radio" ng-model = question1 value="corp"> I just buy it- obviously. But I won't be paying full price<br>
+                    <input type="radio" ng-model = question1 value="kalt"> Well- I found this ship, didn't see anybody around it, so I guess it's mine.<br>
+                    <input type="radio" ng-model = question1 value="legn"> I will earn one.<br>
+                    <input type="radio" ng-model = question1 value="neph"> If I fancy a ship, I'll take it from one weaker than I.<br>
+                    <input type="radio" ng-model = question1 value="pala"> I will build a ship.<br>
+                    <input type="radio" ng-model = question1 value="remn"> I will purchase a ship, in the name of the space pope.<br>
+                    <input type="radio" ng-model = question1 value="twif"> Why would I need a whole ship? I can just book passage with one.<br>
+                    <input type="radio" ng-model = question1 value="zhou"> Is there food on this ship?<br>
+                </form>
+                <p>
+
+                </p>
+                <a data-toggle="tab" href="#six"><button type="button" class="btn btn-primary">Next</button></a>
+            </div>
+        </div>
+    </div>
+    <div id="six" class="tab-pane fade">
+        <div class="panel panel-primary panel-transparent">
+            <div class="panel-heading">
+                Question 6
+            </div>
+            <div class="panel-body">
+                <form>
+                    <h4>
+                        You are working with weapons dealer; what kind of gear are you looking for?
+                    </h4>
+                    <input type="radio" ng-model = question1 value="corp"> Something small enough to fit in my suit.<br>
+                    <input type="radio" ng-model = question1 value="kalt"> I'm not too concerned- something to defend my family.<br>
+                    <input type="radio" ng-model = question1 value="legn"> Something that makes a big boom.<br>
+                    <input type="radio" ng-model = question1 value="neph"> Can I have the weapon attached to me?<br>
+                    <input type="radio" ng-model = question1 value="pala"> Can I have the weapon built into my body?<br>
+                    <input type="radio" ng-model = question1 value="remn"> I'm a fan of more traditional weapons, like a large sword I can charge with psionic energy.<br>
+                    <input type="radio" ng-model = question1 value="twif"> I don't need weapons- I am a weapon.<br>
+                    <input type="radio" ng-model = question1 value="zhou"> Can I eat the weapons?<br>
+                </form>
+                <p>
+
+                </p>
+                <a data-toggle="tab" href="#seven"><button type="button" class="btn btn-primary">Next</button></a>
+            </div>
+        </div>
+    </div>
+    <div id="seven" class="tab-pane fade">
+        <div class="panel panel-primary panel-transparent">
+            <div class="panel-heading">
+                Question 7
+            </div>
+            <div class="panel-body">
+                <form>
+                    <h4>
+                        What sort of role do you like to play in a group?
+                    </h4>
+                    <input type="radio" ng-model = question1 value="corp"> A merchant- or something with the money<br>
+                    <input type="radio" ng-model = question1 value="kalt"> Maybe an engineer or something helpful? I don't know, I just like to be part of the group.<br>
+                    <input type="radio" ng-model = question1 value="legn"> A strong and honorable warrior.<br>
+                    <input type="radio" ng-model = question1 value="neph"> As powerful as I can be.<br>
+                    <input type="radio" ng-model = question1 value="pala"> I'd prefer to be super intelligent and immortal.<br>
+                    <input type="radio" ng-model = question1 value="remn"> I'd like to be a priest and search for morality or the meaning of life.<br>
+                    <input type="radio" ng-model = question1 value="twif"> It's all an adventure- I just want to have fun.<br>
+                    <input type="radio" ng-model = question1 value="zhou"> I voracious monster.<br>
+                </form>
+                <p>
+
+                </p>
+                <a data-toggle="tab" href="#final"><button type="button" class="btn btn-primary">Next</button></a>
+            </div>
+        </div>
+    </div>
+    <div id="final" class="tab-pane fade">
+        <div class="panel panel-primary panel-transparent">
+            <div class="panel-heading">
+                Results
+            </div>
+            <div class="panel-body">
+                <button type="button" class="btn btn-danger" ng-click="test()">What should I play?</button>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="col-md-12">
         <a href="index.html" class="home_btn">
