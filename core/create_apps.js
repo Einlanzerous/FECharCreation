@@ -339,16 +339,5 @@ app.controller('ctrl', function ($scope) {
         engineering: ["Shields", "Power Systems", "Repair"],
         operations: ["Swarm Warheads", "Missiles", "Rockets", "Torpedoes", "Mines"],
         gunnery: ["Point Defenses", "Blasters", "Burst Batteries", "Artillery"]
-    }
-    /*$scope.traitList = [
-        {
-            skill: {
-                type: "category",
-                theme: "narrow",
-                adjust: function() {
-                    //adjust stats
-                }
-            }
-        }
-    ];*/
+    };
 });
