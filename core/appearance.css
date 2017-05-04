@@ -29,6 +29,10 @@ html{
     font-size: large;
 }
 
+.race_final {
+    text-align: center;
+}
+
 container{
     width: 100%;
     margin: -50px;
