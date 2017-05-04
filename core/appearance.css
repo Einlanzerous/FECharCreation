@@ -25,6 +25,10 @@ html{
     background-color: #FFFFFF;
 }
 
+.quizPage .panel-body {
+    font-size: large;
+}
+
 container{
     width: 100%;
     margin: -50px;

@@ -23,6 +23,14 @@ app.controller('ctrl', function ($scope) {
     $scope.perVal = 2;
     $scope.fate = 2;
     $scope.level = 1;
+    $scope.corp = false;
+    $scope.kalt = false;
+    $scope.legn = false;
+    $scope.neph = false;
+    $scope.pala = false;
+    $scope.remn = false;
+    $scope.twif = false;
+    $scope.zhou = false;
     $scope.resources = 2 + $scope.level;
     $scope.currentRes = $scope.resources;
     $scope.influence = 2 + $scope.level;
@@ -94,6 +102,15 @@ app.controller('ctrl', function ($scope) {
         $scope.vehicleSkills.engSec = false;
         $scope.vehicleSkills.operSec = false;
         $scope.vehicleSkills.gunSec = false;
+
+        $scope.corp = false;
+        $scope.kalt = false;
+        $scope.legn = false;
+        $scope.neph = false;
+        $scope.pala = false;
+        $scope.remn = false;
+        $scope.twif = false;
+        $scope.zhou = false;
     };
     $scope.limit = function (val) {
         return (Math.min(5, Math.max(0, val)));
@@ -232,6 +249,7 @@ app.controller('ctrl', function ($scope) {
         $scope.resetStates();
 
         if ($scope.selectedRace === "Corporation") {
+            $scope.corp = true;
             $scope.strVal = $scope.strVal - 2;
             $scope.fate = $scope.fate - 1;
             $scope.resources = $scope.resources + 2;
@@ -242,6 +260,7 @@ app.controller('ctrl', function ($scope) {
             //Insert complication for Kaltorans
         }
         else if ($scope.selectedRace === "Kaltoran") {
+            $scope.kalt = true;
             $scope.fate = $scope.fate + 1;
             for (var i = 1; i < 16; i++) {
                 $scope.pSkillPoints[i] = -1;
@@ -253,6 +272,7 @@ app.controller('ctrl', function ($scope) {
             //Insert complication for Corporates
         }
         else if ($scope.selectedRace === "Legion") {
+            $scope.legn = true;
             $scope.movVal = $scope.movVal - 2;
             $scope.pSkillPoints[5]++;
             $scope.cSkillPoints[1]++;
@@ -261,6 +281,7 @@ app.controller('ctrl', function ($scope) {
             //Additional complications need to be considered
         }
         else if ($scope.selectedRace === "Nephilim") {
+            $scope.neph = true;
             $scope.pSkillPoints[11]++;
             $scope.pSkillPoints[1]--;
             $scope.pSkillPoints[3] = $scope.pSkillPoints[3] - 2;
@@ -272,13 +293,16 @@ app.controller('ctrl', function ($scope) {
             //You are a robot!
             //Gain a professional skill, Secret Knowledge or moderate Perk
             //Max int at 3
+            $scope.pala = true;
             $scope.pSkillPoints[10]++;
             $scope.cSkillPoints[2]++;
             $scope.vSkillPoints[1]++;
             $scope.pSkillPoints[12] = $scope.pSkillPoints[12] - 2;
+            $scope.lang.push["Palantor Code"];
             //Add complications around psycological condition and Remnant
         }
         else if ($scope.selectedRace === "Remnant") {
+            $scope.remn = true;
             $scope.totalAttr = $scope.totalAttr + 2;
             $scope.pSkillPoints[13]++;
             $scope.cSkillPoints[0]++;
@@ -289,6 +313,7 @@ app.controller('ctrl', function ($scope) {
             //Other tweaks need to summarized in race info tag or something
         }
         else if ($scope.selectedRace === "Twi-Far") {
+            $scope.twif = true;
             $scope.pSkillPoints[14]++;
             $scope.cSkillPoints[1]++;
             $scope.vSkillPoints[0]++;
@@ -297,6 +322,7 @@ app.controller('ctrl', function ($scope) {
             //A lot of race information needs to be handed off
         }
         else if ($scope.selectedRace === "Zhou") {
+            $scope.zhou = true;
             $scope.pSkillPoints[4]++;
             $scope.pSkillPoints[7]++;
             $scope.cSkillPoints[3]++;
