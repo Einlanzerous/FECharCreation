@@ -100,7 +100,10 @@ app.controller('quizCtrl', function ($scope) {
             }
         }
 
-        max = Math.max(corp, legn, neph, pala, remn, twif, zhou);
+        max = Math.max(corp, kalt, legn, neph, pala, remn, twif, zhou);
+
+
+        console.log($scope.results);
 
         if (corp === max) {
             $scope.corp = true;
