@@ -21,6 +21,10 @@ html{
     background-repeat: no-repeat;
 }
 
+.quizPage .nav .nav-tabs {
+    background-color: #FFFFFF;
+}
+
 container{
     width: 100%;
     margin: -50px;
