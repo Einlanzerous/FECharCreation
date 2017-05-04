@@ -3,23 +3,21 @@ html,body{
 }
 body{
     background-image: url(Images/BackgroundInfo.jpg);
-    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .nav {
     position: fixed;
     width: 100%;
     background-color: rgba(0,190,255,.85);
-
 }
 
 .tab-content{
     background-color: rgba(0,0,0,.8);
     padding: 30px;
-    padding-top: 50px;
+    padding-top: 25px;
     position: relative;
     z-index: -1;
-    height: 100%;
 }
 
 img.race {
@@ -50,7 +48,8 @@ a {
     color: #333333;
 }
 
-.img-thumbnail {
+img.display {
+    border: 1px solid #FFFFFF;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -78,10 +77,44 @@ a {
 }
 
 .raceDetails {
-    text-align: center;
+    font-size: 13px;
     color: #FFFFFF;
+}
+
+table {
+    width: 85%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .well {
     background-color: rgba(50, 50, 50, 0.6);
+}
+
+th {
+    padding-right: 10px;
+    vertical-align: top;
+}
+td{vertical-align: bottom;}
+
+h5{font-weight: bold;
+    color: white;
+    margin-bottom: 1px;}
+h4 {font-size: 20px;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 15px;}
+h4.in-line{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 2px;}
+p.caption{font-size: 12px;}
+.caption{width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;}
+
+.row {
+    margin-top: 35px;
 }
