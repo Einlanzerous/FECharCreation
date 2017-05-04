@@ -15,6 +15,12 @@ html{
     background-repeat: no-repeat;
 }
 
+.quizPage {
+    background-image: url("Images/quiz_test.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 container{
     width: 100%;
     margin: -50px;
