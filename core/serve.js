@@ -1,9 +1,11 @@
-var express = require('express');
-var bodyparser = require('body-parser');
+var express = require("express");
+
 var app = express();
 
+console.log("Starting server...");
+
 app.use(express.static(__dirname));
-app.use(bodyParser.urlencoded({extended: true}));
 
-app.listen(3000);
-
+app.listen(3000, function() {
+    console.log("Server running on port 3000");
+});
