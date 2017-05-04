@@ -1,0 +1,10 @@
+{
+    "name": "core",
+    "version": "0.5.0",
+    "description": "Site for creating characters in Fragged Empire",
+    "main": "serve.js",
+    "author": "Ashley Dodson, Leng Ghuy, Michael Scott, Jake Frizzell",
+    "dependencies": {
+        "express": "^4.15.2"
+    }
+}
