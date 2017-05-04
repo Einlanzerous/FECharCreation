@@ -1,0 +1,120 @@
+html,body{
+    height: 100%;
+}
+body{
+    background-image: url(Images/BackgroundInfo.jpg);
+    background-repeat: no-repeat;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0,190,255,.85);
+}
+
+.tab-content{
+    background-color: rgba(0,0,0,.8);
+    padding: 30px;
+    padding-top: 25px;
+    position: relative;
+    z-index: -1;
+}
+
+img.race {
+    width: 200px;
+    float: right;
+    margin-left: 15px;
+    border: 2px solid #666;
+}
+
+img.logo {
+    float: left;
+    margin-left: 25px;
+    margin-right: 100px;
+}
+h3 {
+    font-size: 32px;
+    color: #FFFFFF;
+    padding-bottom: 10px;
+}
+li {
+    color: transparent;
+}
+p, ul.text li{
+    color: #e6e6e6;
+}
+
+a {
+    color: #333333;
+}
+
+img.display {
+    border: 1px solid #FFFFFF;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.panel-transparent {
+    background: none;
+}
+
+.panel-transparent .panel-heading {
+    background-color: #55AACC;
+    text-align: right;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.panel-transparent .panel-body {
+    background-color: rgba(50, 50, 50, 0.6);
+    color: #FFFFFF;
+}
+
+.raceName {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.raceDetails {
+    font-size: 13px;
+    color: #FFFFFF;
+}
+
+table {
+    width: 85%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.well {
+    background-color: rgba(50, 50, 50, 0.6);
+}
+
+th {
+    padding-right: 10px;
+    vertical-align: top;
+}
+td{vertical-align: bottom;}
+
+h5{font-weight: bold;
+    color: white;
+    margin-bottom: 1px;}
+h4 {font-size: 20px;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 15px;}
+h4.in-line{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 2px;}
+p.caption{font-size: 12px;}
+.caption{width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;}
+
+.row {
+    margin-top: 35px;
+}
