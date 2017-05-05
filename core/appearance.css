@@ -147,6 +147,8 @@ p {
     height: 250px;
     background-color: #051525;
     color: #FFFFFF;
+    border: 1px solid #5ac;
+    text-align: center;
 }
 
 .panel-transparent {
@@ -161,6 +163,39 @@ p {
 }
 
 .panel-transparent .panel-body{
-    background: rgba(50, 50, 50, 0.6);
+    background: rgba(0, 0, 0, 0.8);
     color: #FFFFFF;
 }
+
+.navigation {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0,190,255,.95);
+    z-index: 1;
+}
+
+.container {
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    margin: auto;
+    top:25px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+img.logo {
+    float: left;
+    margin-left: 25px;
+    margin-right: 100px;
+}
+
+a,span{color: #5ac;}
+a.text{color: black;}
+
+img.display {
+    border: 1px solid #FFFFFF;
+}
+h5{color: #5ac;}
+

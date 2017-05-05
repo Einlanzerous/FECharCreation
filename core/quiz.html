@@ -21,6 +21,14 @@
     <script src="quiz.js"></script>
 </head>
 <body class="quizPage" ng-app="quiz" ng-controller="quizCtrl">
+<div class="navigation">
+    <ul class="nav nav-tabs">
+        <a class="home" href="index.html"><img class="logo" src="Images/Logo.png" width="105"></a>
+        <li><a class="text" href="info.html">Discover Back Stories</a></li>
+        <li><a class="text" href="create.html">Create Your Character</a></li>
+    </ul>
+</div>
+<div class="container">
 <div class="nav">
     <ul class="nav nav-tabs">
         <li class="active">
@@ -259,64 +267,72 @@
                     <button type="button" class="btn btn-danger" ng-click="find_results()" ng-disabled="finished()">Results!</button>
                     <div class="check-element animate-show-hide" ng-show="finished()">
                         <p>
-                            You need to answer all questions before you can pick this.
+                            You need to answer all questions before we can determine your result.
                         </p>
                     </div>
                     <p>
 
                     </p>
                     <div class="check-element animate-show-hide" ng-show="corp">
-                        <div class="well well-sm">
-                            <div class="col-md-4">
-                                You should be Corporation!
-                                Find out more at <a href="info.html">the Info Page</a>.
-                            </div>
-                            <div class="col-md-8">
-                                <img src="images\Corporation.jpg" class="display" height="300">
-                            </div>
-                        </div>
+                        <img src="images\Corporation.jpg" class="display" height="300">
+                        <p>You should be <span>Corporation</span>!
+                            Find out more at the <a href="info.html">Info Page</a>.</p>
+
                     </div>
                     <div class="check-element animate-show-hide" ng-show="kalt">
-                        You should be Kaltoran!
-                        Find out more at <a href="info.html">the Info Page</a>.
+                        <img src="Images\Kaltoran.jpg" class="display" height="300">
+                                <p>You should be <span>Kaltoran</span>!
+                                    Find out more at the <a href="info.html">Info Page</a>.</p>
+
+
                     </div>
                     <div class="check-element animate-show-hide" ng-show="legn">
-                        You should be Legion!
-                        Find out more at <a href="info.html">the Info Page</a>.
+                        <img src="Images\Legion.jpg" class="display" height="300">
+                                <p>You should be <span>Legion</span>!
+                                Find out more at the <a href="info.html">Info Page</a>.</p>
+
+
                     </div>
                     <div class="check-element animate-show-hide" ng-show="neph">
-                        You should be Nephilim!
-                        Find out more at <a href="info.html">the Info Page</a>.
+                        <img src="Images\Nephilim.jpg" class="display" height="300">
+                                <p>You should be <span>Nephilim</span>!
+                                    Find out more at the <a href="info.html">Info Page</a>.</p>
+
+
                     </div>
                     <div class="check-element animate-show-hide" ng-show="pala">
-                        You should be Palantor!
-                        Find out more at <a href="info.html">the Info Page</a>.
+                        <img src="Images\Palantor.jpg" class="display" height="300">
+                                <p>You should be <span>Palantor</span>!
+                                    Find out more at the <a href="info.html">Info Page</a>.</p>
+
+
+
                     </div>
                     <div class="check-element animate-show-hide" ng-show="remn">
-                        You should be Remnant!
-                        Find out more at <a href="info.html">the Info Page</a>.
+                        <img src="Images\Remnant.jpg" class="display" height="300">
+                                <p>You should be <span>Remnant</span>!
+                                    Find out more at the <a href="info.html">Info Page</a>.</p>
+
+
                     </div>
                     <div class="check-element animate-show-hide" ng-show="twif">
-                        You should be Twi-Far!
-                        Find out more at <a href="info.html">the Info Page</a>.
+                        <img src="Images\Twi-Far.jpg" class="display" height="300">
+                                <p>You should be <span>Twi-Far</span>!
+                                    Find out more at the <a href="info.html">Info Page</a>.</p>
+
+
                     </div>
                     <div class="check-element animate-show-hide" ng-show="zhou">
-                        You should be Zhou!
-                        Find out more at <a href="info.html">the Info Page</a>.
+                        <img src="Images\Zhou.jpg" class="display" height="300">
+                                <p>You should be <span>Zhou</span>!
+                                    Find out more at the <a href="info.html">Info Page</a>.</p>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="col-md-12">
-        <a href="index.html" class="home_btn">
-            <button type="button" class="btn btn-primary">
-                Go back to index
-            </button>
-        </a>
-    </div>
 </div>
 </body>
 </html>

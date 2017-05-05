@@ -9,7 +9,7 @@ body{
 .nav {
     position: fixed;
     width: 100%;
-    background-color: rgba(0,190,255,.85);
+    background-color: rgba(0,190,255,.95);
 }
 
 .tab-content{

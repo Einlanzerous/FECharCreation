@@ -1,16 +1,22 @@
-html{
+html,body{
     margin: 0px;
     padding: 0px;
+}
+
+body.manualCreate{
+    background-image: url(Images/BackgroundCreate.jpg);
+    background-repeat: no-repeat;
 }
 
 .nav {
     position: fixed;
     width: 100%;
-    background-color: #5AC;
+    background-color: rgba(0,190,255,.95);
     z-index: 1;
 }
 
 .container {
+    background-color: rgba(0,0,0,.8);
     width: 100%;
     padding-top: 25px;
     position: relative;
@@ -23,4 +29,7 @@ img.logo {
 }
 
 iframe {margin-left: 50px;}
-a {color: white;}
+.text,h2,h3,h4,th {color: white;}
+a {color: black;}
+
+.glyphicon-minus,.glyphicon-plus {color: black;}
